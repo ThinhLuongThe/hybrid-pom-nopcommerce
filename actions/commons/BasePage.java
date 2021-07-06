@@ -126,12 +126,12 @@ public class BasePage {
     }
 
     public void selectItemInDropDown(WebDriver driver, String locator, String text) {
-        select = new Select(getElement(driver, locator));
+        select = new Select(waitForElementVisible(driver, locator));
         select.selectByVisibleText(text);
     }
 
-    public String getSelectedItemInDropDown(WebDriver driver, String locator, String text) {
-        select = new Select(getElement(driver, locator));
+    public String getSelectedItemInDropDown(WebDriver driver, String locator) {
+        select = new Select(waitForElementVisible(driver, locator));
         return select.getFirstSelectedOption().getText();
     }
 
