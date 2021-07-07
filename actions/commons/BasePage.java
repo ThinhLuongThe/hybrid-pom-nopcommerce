@@ -121,7 +121,7 @@ public class BasePage {
     }
 
     public void inputToElement(WebDriver driver, String locator, String inputValue) {
-        getElement(driver, locator).clear();
+        waitForElementVisible(driver, locator).clear();
         getElement(driver, locator).sendKeys(inputValue);
     }
 
@@ -130,7 +130,7 @@ public class BasePage {
         select.selectByVisibleText(text);
     }
 
-    public String getSelectedItemInDropDown(WebDriver driver, String locator) {
+    public String getSelectedValueInDropDown(WebDriver driver, String locator) {
         select = new Select(waitForElementVisible(driver, locator));
         return select.getFirstSelectedOption().getText();
     }
@@ -169,15 +169,15 @@ public class BasePage {
     }
 
     public String getAttributeValue(WebDriver driver, String locator, String attributeName) {
-        return getElement(driver, locator).getAttribute(attributeName);
+        return waitForElementVisible(driver, locator).getAttribute(attributeName);
     }
 
     public String getTextElement(WebDriver driver, String locator) {
-        return getElement(driver, locator).getText();
+        return waitForElementVisible(driver, locator).getText();
     }
 
     public String getCssValue(WebDriver driver, String locator, String cssValue) {
-        return getElement(driver, locator).getCssValue(cssValue);
+        return waitForElementVisible(driver, locator).getCssValue(cssValue);
     }
 
     public String convertRGBaToHex(String rgbaValue) {
@@ -185,6 +185,7 @@ public class BasePage {
     }
 
     public int getElementSize(WebDriver driver, String locator) {
+        waitForElementVisible(driver, locator);
         return getElementList(driver, locator).size();
     }
 

@@ -1,10 +1,8 @@
 package com.nopcommerce.user;
 
 import commons.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -62,9 +60,9 @@ public class Level_02_Register_Login_extends extends BasePage {
         // Step 6
         clickToElement(driver, "//a[@class='ico-account']");
         // Verifying
-        Assert.assertEquals(getSelectedItemInDropDown(driver, dayLocator), selectedDay);
-        Assert.assertEquals(getSelectedItemInDropDown(driver, monthLocator), selectedMonth);
-        Assert.assertEquals(getSelectedItemInDropDown(driver, yearLocator), selectedYear);
+        Assert.assertEquals(getSelectedValueInDropDown(driver, dayLocator), selectedDay);
+        Assert.assertEquals(getSelectedValueInDropDown(driver, monthLocator), selectedMonth);
+        Assert.assertEquals(getSelectedValueInDropDown(driver, yearLocator), selectedYear);
     }
 
     public String generateRandomEmail() {
