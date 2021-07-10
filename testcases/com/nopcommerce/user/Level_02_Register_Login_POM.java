@@ -1,29 +1,24 @@
 package com.nopcommerce.user;
 
-import commons.BasePage;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.MyAccountPageObject;
 import pageObjects.RegisterPageObject;
 
-import java.io.File;
-import java.util.concurrent.TimeUnit;
+public class Level_02_Register_Login_POM extends BaseTest {
+    private WebDriver driver;
+    private HomePageObject homePage;
+    private LoginPageObject loginPage;
+    private MyAccountPageObject myAccountPage;
+    private RegisterPageObject registerPage;
 
-public class Level_02_Register_Login_POM extends BasePage {
-    WebDriver driver;
-    HomePageObject homePage;
-    LoginPageObject loginPage;
-    MyAccountPageObject myAccountPage;
-    RegisterPageObject registerPage;
-
-    String projectPath = System.getProperty("user.dir");
     String firstName = "Soul_FirstName";
     String lastName = "Soul_LastName";
     String email = generateRandomEmail();
@@ -33,21 +28,14 @@ public class Level_02_Register_Login_POM extends BasePage {
     String password = "123456";
 
 
+    @Parameters({"browser", "url"})
     @BeforeClass
-    public void beforeClass() {
-        System.setProperty("webdriver.gecko.driver", projectPath + File.separator + "browserDrivers" + File.separator + "geckodriver");
-        driver = new FirefoxDriver();
-//        System.setProperty("webdriver.chrome.driver", projectPath + File.separator + "browserDrivers" + File.separator + "chromedriver");
-//        driver = new ChromeDriver();
-
-        driver.get("https://demo.nopcommerce.com/");
+    public void beforeClass(String browserName, String url) {
+        driver = getBrowserDriver(browserName, url);
         homePage = new HomePageObject(driver);
-
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
     }
 
-    @Test
+    //    @Test
     public void TC01_Register() {
         homePage.clickToRegisterLink();
         registerPage = new RegisterPageObject(driver);
@@ -68,7 +56,7 @@ public class Level_02_Register_Login_POM extends BasePage {
         homePage = new HomePageObject(driver);
     }
 
-    @Test
+    //    @Test
     public void TC02_Login() {
         homePage.clickToLoginLink();
         loginPage = new LoginPageObject(driver);
@@ -81,7 +69,7 @@ public class Level_02_Register_Login_POM extends BasePage {
 
     }
 
-    @Test
+    //    @Test
     public void TC03_MyAccount() {
         homePage.clickToMyAccountLink();
         myAccountPage = new MyAccountPageObject(driver);
@@ -93,6 +81,10 @@ public class Level_02_Register_Login_POM extends BasePage {
         Assert.assertEquals(myAccountPage.getSelectedMonth(), selectedMonth);
         Assert.assertEquals(myAccountPage.getSelectedYear(), selectedYear);
         Assert.assertEquals(myAccountPage.getEmail(), email);
+    }
+
+    @Test
+    public void TC04() {
 
     }
 

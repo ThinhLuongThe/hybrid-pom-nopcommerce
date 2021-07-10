@@ -1,4 +1,56 @@
 package commons;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import java.io.File;
+import java.util.concurrent.TimeUnit;
+
 public class BaseTest {
+    private WebDriver driver;
+    private String projectPath = System.getProperty("user.dir");
+
+    protected WebDriver getBrowserDriver(String browser, String url) {
+        switch (browser.trim().toUpperCase()) {
+            case "FIREFOX":
+                System.setProperty("webdriver.gecko.driver", projectPath + File.separator + "browserDrivers" + File.separator + "geckodriver");
+                driver = new FirefoxDriver();
+                break;
+            case "CHROME":
+                System.setProperty("webdriver.chrome.driver", projectPath + File.separator + "browserDrivers" + File.separator + "chromedriver");
+                driver = new ChromeDriver();
+                break;
+            case "EDGE":
+                System.setProperty("webdriver.edge.driver", projectPath + File.separator + "browserDrivers" + File.separator + "msedgedriver");
+                driver = new EdgeDriver();
+                break;
+            case "FIREFOX-HEADLESS":
+                System.setProperty("webdriver.gecko.driver", projectPath + File.separator + "browserDrivers" + File.separator + "geckodriver");
+                FirefoxOptions firefoxOpt = new FirefoxOptions();
+                firefoxOpt.addArguments("headless");
+                firefoxOpt.addArguments("window-size=1366x768");
+                driver = new FirefoxDriver(firefoxOpt);
+                break;
+            case "CHROME-HEADLESS":
+                System.setProperty("webdriver.chrome.driver", projectPath + File.separator + "browserDrivers" + File.separator + "chromedriver");
+                ChromeOptions chromeOpt = new ChromeOptions();
+                chromeOpt.addArguments("headless");
+                chromeOpt.addArguments("window-size=1366x768");
+                driver = new ChromeDriver(chromeOpt);
+                break;
+            default:
+                throw new RuntimeException("Browser Name is not correct!");
+        }
+
+        driver.get(url);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        return driver;
+    }
+
+
 }
