@@ -1,5 +1,6 @@
 package commons;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -52,5 +53,42 @@ public class BaseTest {
         return driver;
     }
 
+    protected WebDriver getBrowserDriverManager(String browser, String url) {
+        switch (browser.trim().toUpperCase()) {
+            case "FIREFOX":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                break;
+            case "CHROME":
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+                break;
+            case "EDGE":
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+                break;
+            case "FIREFOX-HEADLESS":
+                WebDriverManager.firefoxdriver().setup();
+                FirefoxOptions firefoxOpt = new FirefoxOptions();
+                firefoxOpt.addArguments("headless");
+                firefoxOpt.addArguments("window-size=1366x768");
+                driver = new FirefoxDriver(firefoxOpt);
+                break;
+            case "CHROME-HEADLESS":
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOpt = new ChromeOptions();
+                chromeOpt.addArguments("headless");
+                chromeOpt.addArguments("window-size=1366x768");
+                driver = new ChromeDriver(chromeOpt);
+                break;
+            default:
+                throw new RuntimeException("Browser Name is not correct!");
+        }
+
+        driver.get(url);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        return driver;
+    }
 
 }

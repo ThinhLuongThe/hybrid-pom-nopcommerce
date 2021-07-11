@@ -12,7 +12,7 @@ import pageObjects.LoginPageObject;
 import pageObjects.MyAccountPageObject;
 import pageObjects.RegisterPageObject;
 
-public class Level_02_Register_Login_POM extends BaseTest {
+public class Level_03_Register_Login_POM extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private LoginPageObject loginPage;
@@ -35,7 +35,7 @@ public class Level_02_Register_Login_POM extends BaseTest {
         homePage = new HomePageObject(driver);
     }
 
-    //    @Test
+    @Test
     public void TC01_Register() {
         homePage.clickToRegisterLink();
         registerPage = new RegisterPageObject(driver);
@@ -56,7 +56,7 @@ public class Level_02_Register_Login_POM extends BaseTest {
         homePage = new HomePageObject(driver);
     }
 
-    //    @Test
+    @Test
     public void TC02_Login() {
         homePage.clickToLoginLink();
         loginPage = new LoginPageObject(driver);
@@ -66,10 +66,9 @@ public class Level_02_Register_Login_POM extends BaseTest {
 
         loginPage.clickToLoginButton();
         homePage = new HomePageObject(driver);
-
     }
 
-    //    @Test
+    @Test
     public void TC03_MyAccount() {
         homePage.clickToMyAccountLink();
         myAccountPage = new MyAccountPageObject(driver);
@@ -81,11 +80,6 @@ public class Level_02_Register_Login_POM extends BaseTest {
         Assert.assertEquals(myAccountPage.getSelectedMonth(), selectedMonth);
         Assert.assertEquals(myAccountPage.getSelectedYear(), selectedYear);
         Assert.assertEquals(myAccountPage.getEmail(), email);
-    }
-
-    @Test
-    public void TC04() {
-
     }
 
     public String generateRandomEmail() {
