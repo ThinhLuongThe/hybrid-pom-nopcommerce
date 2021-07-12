@@ -10,7 +10,8 @@
     <test name="Run on Chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.nopcommerce.user.Level_03_Register_Login_POM"/>
+<!--            <class name="com.nopcommerce.user.Level_03_Register_Login_POM"/>-->
+            <class name="com.nopcommerce.user.Level_04_Register_Login_PageFactory"/>
         </classes>
     </test>
     <!--    <test name="Run on Edge">-->

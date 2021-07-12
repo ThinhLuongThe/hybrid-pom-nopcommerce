@@ -1,6 +1,6 @@
 package com.nopcommerce.user;
 
-import commons.BasePage;
+import commons.Level_03_BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -11,9 +11,10 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-public class Level_02_Register_Login_extends extends BasePage {
+public class Level_02_Register_Login_extends extends Level_03_BasePage {
     WebDriver driver;
     String projectPath = System.getProperty("user.dir");
+
 
     @BeforeClass
     public void beforeClass() {
