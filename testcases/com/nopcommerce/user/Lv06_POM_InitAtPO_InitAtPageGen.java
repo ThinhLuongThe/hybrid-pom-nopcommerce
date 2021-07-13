@@ -7,12 +7,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.MyAccountPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects_level02_newpagePageObject.*;
 
-public class Level_03_Register_Login_POM extends BaseTest {
+
+public class Lv06_POM_InitAtPO_InitAtPageGen extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private LoginPageObject loginPage;
@@ -32,13 +30,12 @@ public class Level_03_Register_Login_POM extends BaseTest {
     @BeforeClass
     public void beforeClass(String browserName, String url) {
         driver = getBrowserDriver(browserName, url);
-        homePage = new HomePageObject(driver);
+        homePage = PageGenerator.getHomePage(driver);
     }
 
     @Test
     public void TC01_Register() {
-        homePage.clickToRegisterLink();
-        registerPage = new RegisterPageObject(driver);
+        registerPage = homePage.clickToRegisterLink();
 
         registerPage.clickToMaleGender();
         registerPage.inputFirstName(firstName);
@@ -52,26 +49,22 @@ public class Level_03_Register_Login_POM extends BaseTest {
         registerPage.clickToRegisterButton();
         Assert.assertTrue(registerPage.isSuccessfulMessageDisplay());
 
-        registerPage.clickToLogOutLink();
-        homePage = new HomePageObject(driver);
+        homePage = registerPage.clickToLogOutLink();
     }
 
     @Test
     public void TC02_Login() {
-        homePage.clickToLoginLink();
-        loginPage = new LoginPageObject(driver);
+        loginPage = homePage.clickToLoginLink();
 
         loginPage.inputEmail(email);
         loginPage.inputPassword(password);
 
-        loginPage.clickToLoginButton();
-        homePage = new HomePageObject(driver);
+        homePage = loginPage.clickToLoginButton();
     }
 
     @Test
     public void TC03_MyAccount() {
-        homePage.clickToMyAccountLink();
-        myAccountPage = new MyAccountPageObject(driver);
+        myAccountPage = homePage.clickToMyAccountLink();
 
         Assert.assertTrue(myAccountPage.isGenderMaleSelected());
         Assert.assertEquals(myAccountPage.getFirstName(), firstName);
@@ -88,6 +81,6 @@ public class Level_03_Register_Login_POM extends BaseTest {
 
     @AfterClass
     public void afterClass() {
-//        driver.quit();
+        driver.quit();
     }
 }

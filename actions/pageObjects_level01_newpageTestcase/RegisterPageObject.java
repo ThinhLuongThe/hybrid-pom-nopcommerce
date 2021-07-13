@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects_level01_newpageTestcase;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;

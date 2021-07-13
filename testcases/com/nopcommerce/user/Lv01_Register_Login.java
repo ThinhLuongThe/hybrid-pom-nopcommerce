@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-public class Level_01_Register_Login{
+public class Lv01_Register_Login {
     WebDriver driver;
     String projectPath = System.getProperty("user.dir");
 

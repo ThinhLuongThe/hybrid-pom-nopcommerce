@@ -12,7 +12,7 @@ import pageFactory.nopcommerce.LoginPageObject;
 import pageFactory.nopcommerce.MyAccountPageObject;
 import pageFactory.nopcommerce.RegisterPageObject;
 
-public class Level_04_Register_Login_PageFactory extends BaseTest {
+public class Lv04_PageFactory extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private LoginPageObject loginPage;

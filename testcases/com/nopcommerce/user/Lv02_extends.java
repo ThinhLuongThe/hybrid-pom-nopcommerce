@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-public class Level_02_Register_Login_extends extends Level_03_BasePage {
+public class Lv02_extends extends Level_03_BasePage {
     WebDriver driver;
     String projectPath = System.getProperty("user.dir");
 
