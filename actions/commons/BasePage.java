@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects_level02_newpagePageObject.*;
+import pageUIs.BasePageUI;
 
 import java.util.List;
 import java.util.Set;
@@ -366,5 +368,38 @@ public class BasePage {
     public boolean waitForElementInvisible(String locator) {
         explicitWait = new WebDriverWait(driver, longTimeOut);
         return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+    }
+
+    public Menu_CustomerInfoPageObject openCustomerInfoPage() {
+        clickToElement(BasePageUI.CUSTOMERINFO_LINK);
+        return Page_Generator.getCustomerInfoPage(driver);
+    }
+    public Menu_AddresssesPageObject openAddressesPage() {
+        clickToElement(BasePageUI.ADDRESSES_LINK);
+        return Page_Generator.getAddressesPage(driver);
+    }
+    public Menu_OrdersPageObject openOrdersPage() {
+        clickToElement(BasePageUI.ORDERS_LINK);
+        return Page_Generator.getOrdersPage(driver);
+    }
+    public Menu_DownloadProductPageObject openDownloadProductPage() {
+        clickToElement(BasePageUI.DOWNLOAD_PRODUCT_LINK);
+        return Page_Generator.getDownloadProductPage(driver);
+    }
+    public Menu_BackSubscriptionPageObject openBackSubscriptionPage() {
+        clickToElement(BasePageUI.BACK_SUBSCRIPTION_LINK);
+        return Page_Generator.getBackSubscriptionPage(driver);
+    }
+    public Menu_RewardPointsPageObject openRewardPointsPage() {
+        clickToElement(BasePageUI.REWARD_POINTS_LINK);
+        return Page_Generator.getRewardPointsPage(driver);
+    }
+    public Menu_ChangePasswordPageObject openChangePasswordPage() {
+        clickToElement(BasePageUI.CHANGE_PASSWORD_LINK);
+        return Page_Generator.getChangePasswordPage(driver);
+    }
+    public Menu_MyProductsPageObject openMyProductsPage() {
+        clickToElement(BasePageUI.MY_PRODUCTS_LINK);
+        return Page_Generator.getMyProductsPage(driver);
     }
 }

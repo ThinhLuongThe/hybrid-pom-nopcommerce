@@ -14,16 +14,16 @@ public class HomePageObject extends BasePage {
 
     public RegisterPageObject clickToRegisterLink() {
         clickToElement(HomePageUI.REGISTER_LINK);
-        return PageGenerator.getRegisterPage(driver);
+        return Page_Generator.getRegisterPage(driver);
     }
 
     public LoginPageObject clickToLoginLink() {
         clickToElement(HomePageUI.LOGIN_LINK);
-        return PageGenerator.getLoginPage(driver);
+        return Page_Generator.getLoginPage(driver);
     }
 
     public MyAccountPageObject clickToMyAccountLink() {
         clickToElement(HomePageUI.MYACCOUNT_LINK);
-        return PageGenerator.getMyAccountPage(driver);
+        return Page_Generator.getMyAccountPage(driver);
     }
 }

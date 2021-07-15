@@ -16,6 +16,12 @@ public class Lv06_POM_InitAtPO_InitAtPageGen extends BaseTest {
     private LoginPageObject loginPage;
     private MyAccountPageObject myAccountPage;
     private RegisterPageObject registerPage;
+    //Switching Page
+    private Menu_MyProductsPageObject myProductPage;
+    private Menu_RewardPointsPageObject rewardPointPage;
+    private Menu_ChangePasswordPageObject changePasswordPage;
+    private Menu_OrdersPageObject ordersPage;
+    private Menu_AddresssesPageObject addressesPage;
 
     String firstName = "Soul_FirstName";
     String lastName = "Soul_LastName";
@@ -30,7 +36,7 @@ public class Lv06_POM_InitAtPO_InitAtPageGen extends BaseTest {
     @BeforeClass
     public void beforeClass(String browserName, String url) {
         driver = getBrowserDriver(browserName, url);
-        homePage = PageGenerator.getHomePage(driver);
+        homePage = Page_Generator.getHomePage(driver);
     }
 
     @Test
@@ -75,12 +81,21 @@ public class Lv06_POM_InitAtPO_InitAtPageGen extends BaseTest {
         Assert.assertEquals(myAccountPage.getEmail(), email);
     }
 
+    @Test
+    public void TC04_Switch_Pages_In_MyAccounts() {
+        myProductPage = myAccountPage.openMyProductsPage();
+        addressesPage = myProductPage.openAddressesPage();
+        changePasswordPage = addressesPage.openChangePasswordPage();
+        rewardPointPage = changePasswordPage.openRewardPointsPage();
+        ordersPage = rewardPointPage.openOrdersPage();
+    }
+
     public String generateRandomEmail() {
         return "Semail" + System.currentTimeMillis() + "@mailinator.com";
     }
 
     @AfterClass
     public void afterClass() {
-        driver.quit();
+//        driver.quit();
     }
 }

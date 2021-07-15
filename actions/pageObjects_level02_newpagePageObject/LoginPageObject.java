@@ -22,6 +22,6 @@ public class LoginPageObject extends BasePage {
 
     public HomePageObject clickToLoginButton() {
         clickToElement(LoginPageUI.LOGIN_BTN);
-        return PageGenerator.getHomePage(driver);
+        return Page_Generator.getHomePage(driver);
     }
 }
