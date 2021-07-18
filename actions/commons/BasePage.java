@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects_level02_newpagePageObject.*;
 import pageUIs.BasePageUI;
+import pageUIs.MyAccountPageUI;
 
 import java.util.List;
 import java.util.Set;
@@ -197,22 +198,22 @@ public class BasePage {
     }
 
     public void checkTheCheckboxOrRadio(String locator) {
-        if (!isControlSelected(locator)) {
+        if (!isElementSelected(locator)) {
             waitForElementClickable(locator).click();
         }
     }
 
     public void uncheckTheCheckbox(String locator) {
-        if (isControlSelected(locator)) {
+        if (isElementSelected(locator)) {
             waitForElementClickable(locator).click();
         }
     }
 
-    public boolean isControlDisplay(String locator) {
+    public boolean isElementDisplayed(String locator) {
         return waitForElementVisible(locator).isDisplayed();
     }
 
-    public boolean isControlSelected(String locator) {
+    public boolean isElementSelected(String locator) {
         return getElement(locator).isSelected();
     }
 
@@ -348,11 +349,7 @@ public class BasePage {
         boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && " +
                 "typeof arguments[0].naturalWidth != \"undefined\" && " +
                 "arguments[0].naturalWidth > 0", getElement(locator));
-        if (status) {
-            return true;
-        } else {
-            return false;
-        }
+        return status ? true : false;
     }
 
     public WebElement waitForElementVisible(String locator) {
@@ -374,32 +371,124 @@ public class BasePage {
         clickToElement(BasePageUI.CUSTOMERINFO_LINK);
         return Page_Generator.getCustomerInfoPage(driver);
     }
+
     public Menu_AddresssesPageObject openAddressesPage() {
         clickToElement(BasePageUI.ADDRESSES_LINK);
         return Page_Generator.getAddressesPage(driver);
     }
+
     public Menu_OrdersPageObject openOrdersPage() {
         clickToElement(BasePageUI.ORDERS_LINK);
         return Page_Generator.getOrdersPage(driver);
     }
+
     public Menu_DownloadProductPageObject openDownloadProductPage() {
         clickToElement(BasePageUI.DOWNLOAD_PRODUCT_LINK);
         return Page_Generator.getDownloadProductPage(driver);
     }
+
     public Menu_BackSubscriptionPageObject openBackSubscriptionPage() {
         clickToElement(BasePageUI.BACK_SUBSCRIPTION_LINK);
         return Page_Generator.getBackSubscriptionPage(driver);
     }
+
     public Menu_RewardPointsPageObject openRewardPointsPage() {
         clickToElement(BasePageUI.REWARD_POINTS_LINK);
         return Page_Generator.getRewardPointsPage(driver);
     }
+
     public Menu_ChangePasswordPageObject openChangePasswordPage() {
         clickToElement(BasePageUI.CHANGE_PASSWORD_LINK);
         return Page_Generator.getChangePasswordPage(driver);
     }
+
     public Menu_MyProductsPageObject openMyProductsPage() {
         clickToElement(BasePageUI.MY_PRODUCTS_LINK);
         return Page_Generator.getMyProductsPage(driver);
+    }
+
+    public String castRestParameter(String locator, String... varArguments) {
+        return String.format(locator, (Object[]) varArguments);
+    }
+
+    public void clickToElement(String locator, String... varArguments) {
+        waitForElementClickable(castRestParameter(locator, varArguments)).click();
+    }
+
+    public void inputToElement(String locator, String inputValue, String... varArguments) {
+        waitForElementVisible(castRestParameter(locator, varArguments)).clear();
+        getElement(castRestParameter(locator, varArguments)).sendKeys(inputValue);
+    }
+
+    public void selectItemInDropDown(String locator, String text, String... varArguments) {
+        select = new Select(waitForElementVisible(castRestParameter(locator, varArguments)));
+        select.selectByVisibleText(text);
+    }
+
+    public String getSelectedValueInDropDown(String locator, String... varArguments) {
+        select = new Select(waitForElementVisible(castRestParameter(locator, varArguments)));
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public String getAttributeValue(String locator, String attributeName, String... varArguments) {
+        return waitForElementVisible(castRestParameter(locator, varArguments)).getAttribute(attributeName);
+    }
+
+    public String getTextElement(String locator, String... varArguments) {
+        return waitForElementVisible(castRestParameter(locator, varArguments)).getText();
+    }
+
+    public String getCssValue(String locator, String cssValue, String... varArguments) {
+        return waitForElementVisible(castRestParameter(locator, varArguments)).getCssValue(cssValue);
+    }
+
+    public int getElementSize(String locator, String... varArguments) {
+        waitForElementVisible(castRestParameter(locator, varArguments));
+        return getElementList(castRestParameter(locator, varArguments)).size();
+    }
+
+    public boolean isElementDisplayed(String locator, String... varArguments) {
+        return waitForElementVisible(castRestParameter(locator, varArguments)).isDisplayed();
+    }
+
+    public boolean isElementSelected(String locator, String... varArguments) {
+        return getElement(castRestParameter(locator, varArguments)).isSelected();
+    }
+
+    public boolean isControlEnabled(String locator, String... varArguments) {
+        return waitForElementVisible(castRestParameter(locator, varArguments)).isEnabled();
+    }
+
+    public void highlightElement(String locator, String... varArguments) {
+        jsExecutor = (JavascriptExecutor) driver;
+        WebElement element = getElement(castRestParameter(locator, varArguments));
+        String originalStyle = element.getAttribute("style");
+        jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", "border: 2px solid red; border-style: dashed;");
+        sleepInSecond(1);
+        jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", originalStyle);
+    }
+
+    public void clickToElementByJS(String locator, String... varArguments) {
+        jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", getElement(castRestParameter(locator, varArguments)));
+    }
+
+    public WebElement waitForElementVisible(String locator, String... varArguments) {
+        explicitWait = new WebDriverWait(driver, longTimeOut);
+        return explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(castRestParameter(locator, varArguments))));
+    }
+
+    public WebElement waitForElementClickable(String locator, String... varArguments) {
+        explicitWait = new WebDriverWait(driver, longTimeOut);
+        return explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(castRestParameter(locator, varArguments))));
+    }
+
+    public boolean waitForElementInvisible(String locator, String... varArguments) {
+        explicitWait = new WebDriverWait(driver, longTimeOut);
+        return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(castRestParameter(locator, varArguments))));
+    }
+
+    public void openTargetSubPage_II(String pageName) {
+        clickToElement(MyAccountPageUI.DYNAMIC_MENU_PAGE_LINK, pageName);
     }
 }

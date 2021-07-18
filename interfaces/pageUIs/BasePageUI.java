@@ -1,6 +1,7 @@
 package pageUIs;
 
 public class BasePageUI {
+    //Used for MyAccountPageObject
     public static final String CUSTOMERINFO_LINK = "//div[@class='listbox']//a[text()='Customer info']";
     public static final String ADDRESSES_LINK = "//div[@class='listbox']//a[text()='Addresses']";
     public static final String ORDERS_LINK = "//div[@class='listbox']//a[text()='Orders']";

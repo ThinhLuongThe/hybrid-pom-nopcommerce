@@ -11,7 +11,7 @@ public class MyAccountPageObject extends BasePage {
 
     public boolean isGenderMaleSelected() {
         waitForElementVisible(MyAccountPageUI.GENDER_MALE_RADIO);
-        return isControlSelected(MyAccountPageUI.GENDER_MALE_RADIO);
+        return isElementSelected(MyAccountPageUI.GENDER_MALE_RADIO);
     }
 
     public String getFirstName() {

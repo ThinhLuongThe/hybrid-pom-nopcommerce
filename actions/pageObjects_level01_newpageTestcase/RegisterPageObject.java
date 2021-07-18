@@ -50,7 +50,7 @@ public class RegisterPageObject extends BasePage {
     }
 
     public boolean isSuccessfulMessageDisplay() {
-        return isControlDisplay(RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
+        return isElementDisplayed(RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
     }
 
     public void clickToLogOutLink() {
