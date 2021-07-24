@@ -7,7 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects_level02_newpagePageObject.*;
+import pageObjects.nopCommerce.level02_newpagePageObject.*;
 
 
 public class Lv06_POM_InitAtPO_InitAtPageGen extends BaseTest {

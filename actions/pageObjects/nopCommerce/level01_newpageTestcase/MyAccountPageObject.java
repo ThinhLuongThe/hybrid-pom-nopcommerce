@@ -1,8 +1,8 @@
-package pageObjects_level01_newpageTestcase;
+package pageObjects.nopCommerce.level01_newpageTestcase;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.MyAccountPageUI;
+import pageUIs.nopCommerce.MyAccountPageUI;
 
 public class MyAccountPageObject extends BasePage {
     public MyAccountPageObject(WebDriver driver) {

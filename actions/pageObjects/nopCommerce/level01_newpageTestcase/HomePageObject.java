@@ -1,8 +1,8 @@
-package pageObjects_level01_newpageTestcase;
+package pageObjects.nopCommerce.level01_newpageTestcase;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.HomePageUI;
+import pageUIs.nopCommerce.HomePageUI;
 
 public class HomePageObject extends BasePage {
     public HomePageObject(WebDriver driver) {

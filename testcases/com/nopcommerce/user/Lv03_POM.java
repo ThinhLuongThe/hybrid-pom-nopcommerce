@@ -7,10 +7,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects_level01_newpageTestcase.HomePageObject;
-import pageObjects_level01_newpageTestcase.LoginPageObject;
-import pageObjects_level01_newpageTestcase.MyAccountPageObject;
-import pageObjects_level01_newpageTestcase.RegisterPageObject;
+import pageObjects.nopCommerce.level01_newpageTestcase.HomePageObject;
+import pageObjects.nopCommerce.level01_newpageTestcase.LoginPageObject;
+import pageObjects.nopCommerce.level01_newpageTestcase.MyAccountPageObject;
+import pageObjects.nopCommerce.level01_newpageTestcase.RegisterPageObject;
 
 public class Lv03_POM extends BaseTest {
     private WebDriver driver;

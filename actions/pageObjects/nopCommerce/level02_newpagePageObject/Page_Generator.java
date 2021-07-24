@@ -1,4 +1,4 @@
-package pageObjects_level02_newpagePageObject;
+package pageObjects.nopCommerce.level02_newpagePageObject;
 
 import org.openqa.selenium.WebDriver;
 

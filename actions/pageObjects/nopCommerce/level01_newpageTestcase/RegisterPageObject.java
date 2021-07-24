@@ -1,15 +1,12 @@
-package pageObjects_level02_newpagePageObject;
+package pageObjects.nopCommerce.level01_newpageTestcase;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.RegisterPageUI;
+import pageUIs.nopCommerce.RegisterPageUI;
 
 public class RegisterPageObject extends BasePage {
-    WebDriver driver;
-
     public RegisterPageObject(WebDriver driver) {
         super(driver);
-        this.driver = driver;
     }
 
     public void clickToMaleGender() {
@@ -56,8 +53,7 @@ public class RegisterPageObject extends BasePage {
         return isElementDisplayed(RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
     }
 
-    public HomePageObject clickToLogOutLink() {
+    public void clickToLogOutLink() {
         clickToElement(RegisterPageUI.LOGOUT_BTN);
-        return Page_Generator.getHomePage(driver);
     }
 }

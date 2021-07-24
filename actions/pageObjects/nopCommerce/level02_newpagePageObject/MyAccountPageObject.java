@@ -1,8 +1,8 @@
-package pageObjects_level02_newpagePageObject;
+package pageObjects.nopCommerce.level02_newpagePageObject;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.MyAccountPageUI;
+import pageUIs.nopCommerce.MyAccountPageUI;
 
 public class MyAccountPageObject extends BasePage {
     public MyAccountPageObject(WebDriver driver) {

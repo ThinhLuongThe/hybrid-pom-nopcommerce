@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.nopCommerce;
 
 public class BasePageUI {
     //Used for MyAccountPageObject

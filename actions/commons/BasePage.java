@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects_level02_newpagePageObject.*;
-import pageUIs.BasePageUI;
-import pageUIs.MyAccountPageUI;
+import pageObjects.nopCommerce.level02_newpagePageObject.*;
+import pageUIs.nopCommerce.BasePageUI;
+import pageUIs.nopCommerce.MyAccountPageUI;
 
 import java.util.List;
 import java.util.Set;
@@ -51,7 +51,7 @@ public class BasePage {
         driver.navigate().forward();
     }
 
-    public void refreshToPage() {
+    public void refreshThePage() {
         driver.navigate().refresh();
     }
 
@@ -352,14 +352,14 @@ public class BasePage {
         return status ? true : false;
     }
 
-    public WebElement waitForElementVisible(String locator) {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
-        return explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
-    }
-
     public WebElement waitForElementClickable(String locator) {
         explicitWait = new WebDriverWait(driver, longTimeOut);
         return explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
+    }
+
+    public WebElement waitForElementVisible(String locator) {
+        explicitWait = new WebDriverWait(driver, longTimeOut);
+        return explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
     }
 
     public boolean waitForElementInvisible(String locator) {
@@ -451,6 +451,10 @@ public class BasePage {
         return waitForElementVisible(castRestParameter(locator, varArguments)).isDisplayed();
     }
 
+    public boolean isElementInvisible(String locator, String... varArguments) {
+        return waitForElementInvisible(castRestParameter(locator, varArguments));
+    }
+
     public boolean isElementSelected(String locator, String... varArguments) {
         return getElement(castRestParameter(locator, varArguments)).isSelected();
     }
@@ -487,6 +491,12 @@ public class BasePage {
         explicitWait = new WebDriverWait(driver, longTimeOut);
         return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(castRestParameter(locator, varArguments))));
     }
+
+    public void sendKeyboardToElement(String locator, Keys key, String... varArguments) {
+        actions = new Actions(driver);
+        actions.sendKeys(getElement(castRestParameter(locator, varArguments)), key).perform();
+    }
+
 
     public void openTargetSubPage_II(String pageName) {
         clickToElement(MyAccountPageUI.DYNAMIC_MENU_PAGE_LINK, pageName);

@@ -1,12 +1,15 @@
-package pageObjects_level01_newpageTestcase;
+package pageObjects.nopCommerce.level02_newpagePageObject;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.LoginPageUI;
+import pageUIs.nopCommerce.LoginPageUI;
 
 public class LoginPageObject extends BasePage {
+    WebDriver driver;
+
     public LoginPageObject(WebDriver driver) {
         super(driver);
+        this.driver = driver;
     }
 
     public void inputEmail(String email) {
@@ -17,7 +20,8 @@ public class LoginPageObject extends BasePage {
         inputToElement(LoginPageUI.PASSWORD_TXT, password);
     }
 
-    public void clickToLoginButton() {
+    public HomePageObject clickToLoginButton() {
         clickToElement(LoginPageUI.LOGIN_BTN);
+        return Page_Generator.getHomePage(driver);
     }
 }
