@@ -21,7 +21,7 @@ public class BasePage {
     private Actions actions;
     private JavascriptExecutor jsExecutor;
     private WebDriverWait explicitWait;
-    private int longTimeOut = 30;
+    private int longTimeOut = 20;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -210,7 +210,7 @@ public class BasePage {
     }
 
     public boolean isElementDisplayed(String locator) {
-        return waitForElementVisible(locator).isDisplayed();
+        return getElement(locator).isDisplayed();
     }
 
     public boolean isElementSelected(String locator) {
@@ -218,7 +218,7 @@ public class BasePage {
     }
 
     public boolean isControlEnabled(String locator) {
-        return waitForElementVisible(locator).isEnabled();
+        return getElement(locator).isEnabled();
     }
 
     public void switchToFrame(String locator) {
@@ -448,7 +448,7 @@ public class BasePage {
     }
 
     public boolean isElementDisplayed(String locator, String... varArguments) {
-        return waitForElementVisible(castRestParameter(locator, varArguments)).isDisplayed();
+        return getElement(castRestParameter(locator, varArguments)).isDisplayed();
     }
 
     public boolean isElementInvisible(String locator, String... varArguments) {
@@ -460,7 +460,7 @@ public class BasePage {
     }
 
     public boolean isControlEnabled(String locator, String... varArguments) {
-        return waitForElementVisible(castRestParameter(locator, varArguments)).isEnabled();
+        return getElement(castRestParameter(locator, varArguments)).isEnabled();
     }
 
     public void highlightElement(String locator, String... varArguments) {

@@ -26,4 +26,8 @@ public class HomePageObject extends BasePage {
     public void actionToRowWithColumnName(String action, String countryValue) {
         clickToElement(HomePageUI.ACTION_OF_A_ROW_LOCATOR, countryValue, action);
     }
+
+    public boolean isTheRowHidden(String femaleValue, String countryValue, String maleValue, String totalValue) {
+        return isElementInvisible(HomePageUI.DATA_OF_A_ROW_LOCATOR, femaleValue, countryValue, maleValue, totalValue);
+    }
 }

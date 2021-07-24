@@ -11,7 +11,7 @@ import pageObjects.DataTable.JQuery.HomePageObject;
 import pageObjects.DataTable.JQuery.Page_Generator;
 
 
-public class Lv08_POM_DataTable extends BaseTest {
+public class Lv09_POM_DataTable extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
 
@@ -30,7 +30,7 @@ public class Lv08_POM_DataTable extends BaseTest {
         homePage.clickToPageNumber("7");
     }
 
-//    @Test
+    //    @Test
     public void TC02_Filter_Row() {
         homePage.inputToColumnName("Females", "750");
         Assert.assertTrue(homePage.isTheRowDisplay("750", "Aruba", "756", "1504"));
@@ -39,10 +39,21 @@ public class Lv08_POM_DataTable extends BaseTest {
         Assert.assertTrue(homePage.isTheRowDisplay("777", "Antigua and Barbuda", "803", "1580"));
     }
 
-        @Test
+    @Test
     public void TC03_Action_Row() {
         homePage.actionToRowWithColumnName("remove", "Afghanistan");
+
         homePage.actionToRowWithColumnName("remove", "Arab Rep of Egypt");
+
+        Assert.assertTrue(homePage.isTheRowDisplay("750", "Aruba", "756", "1504"));
+        homePage.actionToRowWithColumnName("remove", "Aruba");
+        Assert.assertTrue(homePage.isTheRowHidden("750", "Aruba", "756", "1504"));
+
+        Assert.assertTrue(homePage.isTheRowDisplay("32919696", "ASIA", "36009309", "68929229"));
+        homePage.actionToRowWithColumnName("remove", "ASIA");
+        Assert.assertTrue(homePage.isTheRowHidden("32919696", "ASIA", "36009309", "68929229"));
+
+        homePage.actionToRowWithColumnName("edit", "Australia/New Zealand");
     }
 
     @AfterClass

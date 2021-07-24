@@ -4,7 +4,7 @@
     <test name="Run on Chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.nopcommerce.user.Lv08_POM_DataTable"/>
+            <class name="com.nopcommerce.user.Lv09_POM_DataTable"/>
         </classes>
     </test>
 </suite>
