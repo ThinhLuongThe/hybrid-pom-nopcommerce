@@ -23,14 +23,14 @@ public class Lv09_POM_DataTable extends BaseTest {
         homePage = Page_Generator.getHomePage(driver);
     }
 
-    //    @Test
+        @Test
     public void TC01_Pagination_Switching() {
         homePage.clickToPageNumber("3");
         homePage.clickToPageNumber("5");
         homePage.clickToPageNumber("7");
     }
 
-    //    @Test
+        @Test
     public void TC02_Filter_Row() {
         homePage.inputToColumnName("Females", "750");
         Assert.assertTrue(homePage.isTheRowDisplay("750", "Aruba", "756", "1504"));
