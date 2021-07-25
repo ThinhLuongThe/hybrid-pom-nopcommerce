@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Testcases for DataTable" parallel="false">
+    <parameter name="url" value="http://live.demoguru99.com/"/>
+    <test name="Run on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url2" value="http://live.demoguru99.com/index.php/backendlogin/customer/"/>
+        <parameter name="adminUsername" value="user01"/>
+        <parameter name="adminPassword" value="guru99com"/>
+        <classes>
+            <class name="com.liveguru.user.Lv09_POM_DataTable_liveguru"/>
+        </classes>
+    </test>
+</suite>

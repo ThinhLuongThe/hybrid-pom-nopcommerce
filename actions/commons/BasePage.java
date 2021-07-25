@@ -210,15 +210,19 @@ public class BasePage {
     }
 
     public boolean isElementDisplayed(String locator) {
-        return getElement(locator).isDisplayed();
+        return waitForElementVisible(locator).isDisplayed();
+    }
+
+    public boolean isElementNotDisplayed(String locator) {
+        return !getElement(locator).isDisplayed();
     }
 
     public boolean isElementSelected(String locator) {
-        return getElement(locator).isSelected();
+        return waitForElementVisible(locator).isSelected();
     }
 
-    public boolean isControlEnabled(String locator) {
-        return getElement(locator).isEnabled();
+    public boolean isElementEnabled(String locator) {
+        return waitForElementVisible(locator).isEnabled();
     }
 
     public void switchToFrame(String locator) {
@@ -448,7 +452,7 @@ public class BasePage {
     }
 
     public boolean isElementDisplayed(String locator, String... varArguments) {
-        return getElement(castRestParameter(locator, varArguments)).isDisplayed();
+        return waitForElementVisible(castRestParameter(locator, varArguments)).isDisplayed();
     }
 
     public boolean isElementInvisible(String locator, String... varArguments) {
@@ -456,11 +460,11 @@ public class BasePage {
     }
 
     public boolean isElementSelected(String locator, String... varArguments) {
-        return getElement(castRestParameter(locator, varArguments)).isSelected();
+        return waitForElementVisible(castRestParameter(locator, varArguments)).isSelected();
     }
 
-    public boolean isControlEnabled(String locator, String... varArguments) {
-        return getElement(castRestParameter(locator, varArguments)).isEnabled();
+    public boolean isElementEnabled(String locator, String... varArguments) {
+        return waitForElementVisible(castRestParameter(locator, varArguments)).isEnabled();
     }
 
     public void highlightElement(String locator, String... varArguments) {
