@@ -11,6 +11,7 @@ import pageObjects.nopCommerce.level02_newpagePageObject.*;
 import pageUIs.nopCommerce.BasePageUI;
 import pageUIs.nopCommerce.MyAccountPageUI;
 
+import java.io.File;
 import java.util.List;
 import java.util.Set;
 
@@ -258,11 +259,6 @@ public class BasePage {
         actions.sendKeys(getElement(locator), key).perform();
     }
 
-    public void upload1File(String locator, String filePath) {
-        getElement(locator).sendKeys(filePath);
-    }
-
-
     public Object executeForBrowser(String javaScript) {
         jsExecutor = (JavascriptExecutor) driver;
         return jsExecutor.executeScript(javaScript);
@@ -501,8 +497,16 @@ public class BasePage {
         actions.sendKeys(getElement(castRestParameter(locator, varArguments)), key).perform();
     }
 
-
     public void openTargetSubPage_II(String pageName) {
         clickToElement(MyAccountPageUI.DYNAMIC_MENU_PAGE_LINK, pageName);
+    }
+
+    public void uploadFiles(String... fileNames) {
+        String uploadPath = System.getProperty("user.dir") + File.separator + "uploadFiles" + File.separator;
+        String allPath = "";
+        for (String fileName : fileNames) {
+            allPath += uploadPath + fileName + "\n";
+        }
+        getElement(pageUIs.BasePageUI.UPLOAD_FILE_LOCATOR).sendKeys(allPath.trim());
     }
 }

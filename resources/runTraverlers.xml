@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Testcases for Travelers" parallel="false">
+    <parameter name="url" value="https://blueimp.github.io/jQuery-File-Upload/"/>
+    <test name="Run on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.travelers.Lv10_Upload_Files"/>
+        </classes>
+    </test>
+</suite>

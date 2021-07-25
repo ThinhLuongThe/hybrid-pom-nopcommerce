@@ -91,4 +91,19 @@ public class BaseTest {
         return driver;
     }
 
+    private String osName = System.getProperty("os.name");
+
+    private String getBeforeAndAfterSlashes(String folderName) {
+        if (osName.toLowerCase().indexOf("mac") >= 0 ||
+                osName.toLowerCase().indexOf("sunos") >= 0 ||
+                (osName.toLowerCase().indexOf("nix") >= 0 ||
+                        osName.toLowerCase().indexOf("nux") >= 0)) {
+            folderName = "/" + folderName + "/";
+        } else if (osName.toLowerCase().indexOf("win") >= 0) {
+            folderName = "\\" + folderName + "\\";
+        } else {
+            folderName = null;
+        }
+        return folderName;
+    }
 }
