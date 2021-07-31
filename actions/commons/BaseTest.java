@@ -1,6 +1,8 @@
 package commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,6 +18,11 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     private WebDriver driver;
     private String projectPath = System.getProperty("user.dir");
+    protected final Log log;
+
+    protected BaseTest() {
+        log = LogFactory.getLog(getClass());
+    }
 
     public WebDriver getDriver() {
         return driver;
@@ -126,10 +133,16 @@ public class BaseTest {
     private boolean checkTrue(boolean condition) {
         boolean pass = true;
         try {
+            if (condition){
+                log.info(" -------------------------- CONDITION TRUE -------------------------- ");
+            } else{
+                log.info(" -------------------------- CONDITION FALSE -------------------------- ");
+            }
             Assert.assertTrue(condition);
+            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
+            log.info(" -------------------------- FAILED -------------------------- ");
             pass = false;
-
             // Add lỗi vào ReportNG
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
@@ -144,13 +157,15 @@ public class BaseTest {
     private boolean checkFailed(boolean condition) {
         boolean pass = true;
         try {
-            /*if (condition == false) {
-                log.info(" -------------------------- PASSED -------------------------- ");
-            } else {
-                log.info(" -------------------------- FAILED -------------------------- ");
-            }*/
+            if (condition){
+                log.info(" -------------------------- CONDITION TRUE -------------------------- ");
+            } else{
+                log.info(" -------------------------- CONDITION FALSE -------------------------- ");
+            }
             Assert.assertFalse(condition);
+            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
+            log.info(" -------------------------- FAILED -------------------------- ");
             pass = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
@@ -166,10 +181,10 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertEquals(actual, expected);
-//            log.info(" -------------------------- PASSED -------------------------- ");
+            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
+            log.info(" -------------------------- FAILED -------------------------- ");
             pass = false;
-//            log.info(" -------------------------- FAILED -------------------------- ");
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
         }

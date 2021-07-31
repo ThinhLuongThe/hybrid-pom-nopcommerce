@@ -5,7 +5,8 @@
     </listeners>
     <test name="Run on Chrome">
         <classes>
-            <class name="com.liveguru.user.Lv13_Soft_Assert"/>
+            <class name="com.liveguru.user.Lv13_SoftAssert_Lv14_Log"/>
+<!--            <class name="com.liveguru.user.Lv13_Soft_Assert"/>-->
         </classes>
     </test>
 </suite>

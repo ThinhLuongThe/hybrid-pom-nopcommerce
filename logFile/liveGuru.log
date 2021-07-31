@@ -1,0 +1,388 @@
+2021-07-31 18:47:06,944 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 18:47:06,977 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 18:47:06,996 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 18:47:07,263 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 18:47:07,296 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify error message displayed
+2021-07-31 18:47:07,325 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 45 - Verify .....
+2021-07-31 18:47:07,384 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 50 - Verify .....
+2021-07-31 18:47:12,451 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10572, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b5e3e34d-c05e-cb4d-b544-099941cd0c6a
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 18:47:12,452 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 65 - Verify .....
+2021-07-31 18:47:12,488 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 76 - Verify .....
+2021-07-31 18:47:17,516 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10572, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b5e3e34d-c05e-cb4d-b544-099941cd0c6a
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+[INFO ] [2021-07-31 18:50:54,533] Step 01 - Input to email textbox
+[INFO ] [2021-07-31 18:50:54,566] Step 02 - Input to password textbox
+[INFO ] [2021-07-31 18:50:54,595] Step 03 - Click to Login button
+[INFO ] [2021-07-31 18:50:54,845] Step 05 - Verify error message displayed
+[INFO ] [2021-07-31 18:50:54,881] Step 10 - Verify error message displayed
+[INFO ] [2021-07-31 18:50:54,899] Step 45 - Verify .....
+[INFO ] [2021-07-31 18:50:54,974] Step 50 - Verify .....
+[INFO ] [2021-07-31 18:51:00,054] Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10609, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0e7102e4-f469-f345-b9f5-48658d5dc69c
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+[INFO ] [2021-07-31 18:51:00,055] Step 65 - Verify .....
+[INFO ] [2021-07-31 18:51:00,091] Step 76 - Verify .....
+[INFO ] [2021-07-31 18:51:05,120] Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10609, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0e7102e4-f469-f345-b9f5-48658d5dc69c
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 18:59:24,715 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 18:59:24,754 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 18:59:24,794 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 18:59:25,045 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 18:59:25,074 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify error message displayed
+2021-07-31 18:59:25,117 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 45 - Verify .....
+2021-07-31 18:59:25,167 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 50 - Verify .....
+2021-07-31 18:59:30,235 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10677, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d64f75f7-adc2-134d-9ae6-01f240f447a1
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 18:59:30,235 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 65 - Verify .....
+2021-07-31 18:59:30,272 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 76 - Verify .....
+2021-07-31 18:59:35,287 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10677, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d64f75f7-adc2-134d-9ae6-01f240f447a1
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:01:20,563 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:01:20,602 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:01:20,629 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:01:20,890 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:01:20,940 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify error message displayed
+2021-07-31 19:01:20,971 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 45 - Verify .....
+2021-07-31 19:01:21,053 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 50 - Verify .....
+2021-07-31 19:01:26,122 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10707, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: aab59029-3042-af4b-85da-916d8c97588a
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:01:26,122 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 65 - Verify .....
+2021-07-31 19:01:26,160 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 76 - Verify .....
+2021-07-31 19:01:31,190 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10707, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: aab59029-3042-af4b-85da-916d8c97588a
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:08:11,179 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:08:11,207 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:08:11,243 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:08:11,498 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:08:11,534 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:08:11,534 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify error message displayed
+2021-07-31 19:08:11,553 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:08:11,555 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 45 - Verify .....
+2021-07-31 19:08:11,619 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 50 - Verify .....
+2021-07-31 19:08:16,658 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10755, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f7de2802-8017-0f48-9454-ebee9752bb65
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:08:16,658 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 65 - Verify .....
+2021-07-31 19:08:16,715 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 76 - Verify .....
+2021-07-31 19:08:21,744 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10755, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f7de2802-8017-0f48-9454-ebee9752bb65
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:13:49,156 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:13:49,191 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:13:49,229 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:13:49,489 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:13:49,542 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:13:49,542 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 6 - Verify error message displayed
+2021-07-31 19:13:49,562 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:13:49,563 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 7 - Verify .....
+2021-07-31 19:13:49,636 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:13:49,636 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 8 - Verify .....
+2021-07-31 19:13:54,716 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10804, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 13e94a8b-f081-8e43-81ff-688f39967ec4
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:13:54,716 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:13:54,716 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 9 - Verify .....
+2021-07-31 19:13:54,757 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:13:54,757 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify .....
+2021-07-31 19:13:59,781 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10804, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 13e94a8b-f081-8e43-81ff-688f39967ec4
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:13:59,781 INFO  com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:16:13,744 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:16:13,781 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:16:13,821 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:16:14,075 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:16:14,123 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:16:14,123 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:16:14,144 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:16:14,151 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 07 - Verify .....
+2021-07-31 19:16:14,212 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:16:14,212 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 08 - Verify .....
+2021-07-31 19:16:19,278 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10835, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3847f3bb-16ad-0e4c-92d5-bae290de49dd
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:16:19,278 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:16:19,278 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 09 - Verify .....
+2021-07-31 19:16:19,319 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:16:19,319 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify .....
+2021-07-31 19:16:24,336 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10835, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3847f3bb-16ad-0e4c-92d5-bae290de49dd
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:16:24,338 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:20:45,753 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:20:45,790 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:20:45,832 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:20:46,083 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:20:46,112 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:20:46,112 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:20:46,149 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:20:46,151 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 07 - Verify .....
+2021-07-31 19:20:46,227 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:20:46,227 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 08 - Verify .....
+2021-07-31 19:20:51,313 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10863, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b05c3988-a86b-f94a-9a1c-dc379011e6c3
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:20:51,314 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:20:51,314 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 09 - Verify .....
+2021-07-31 19:20:51,352 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:20:51,352 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify .....
+2021-07-31 19:20:56,380 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10863, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b05c3988-a86b-f94a-9a1c-dc379011e6c3
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:20:56,381 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:25:21,656 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:25:21,696 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:25:21,735 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:25:21,989 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:25:22,021 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Actual = This is a required field.
+2021-07-31 19:25:22,021 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Expected = This is a required field.
+2021-07-31 19:25:22,022 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:25:22,022 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:25:22,059 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Actual = This is a required field.
+2021-07-31 19:25:22,059 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Expected = This is a required field
+2021-07-31 19:25:22,059 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:25:22,061 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 07 - Verify .....
+2021-07-31 19:25:22,135 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:25:22,135 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:25:22,135 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 08 - Verify .....
+2021-07-31 19:25:27,220 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10936, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dfe6193f-3c98-524d-b960-cf56d7da14e2
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:25:27,221 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:25:27,221 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:25:27,221 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 09 - Verify .....
+2021-07-31 19:25:27,263 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:25:27,263 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:25:27,263 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify .....
+2021-07-31 19:25:32,278 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Exception = Unable to locate element: //button[@id='send_failed_not_found']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'Thinhs-MBP.FFThinhLAN', ip: 'fe80:0:0:0:1092:e592:4cf3:49e2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 90.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210705185941, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 10936, moz:profile: /var/folders/4f/2xqmy5cn1s9..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.5.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dfe6193f-3c98-524d-b960-cf56d7da14e2
+*** Element info: {Using=xpath, value=//button[@id='send_failed_not_found']}
+2021-07-31 19:25:32,281 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:25:32,281 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:31:56,359 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:31:56,398 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:31:56,438 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:31:56,697 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:31:56,749 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Actual = This is a required field.
+2021-07-31 19:31:56,750 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Expected = This is a required field.
+2021-07-31 19:31:56,751 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:31:56,751 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:31:56,775 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Actual = This is a required field.
+2021-07-31 19:31:56,775 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Expected = This is a required field
+2021-07-31 19:33:18,898 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:33:18,933 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:33:18,972 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:33:19,231 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:33:19,286 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Actual = This is a required field.
+2021-07-31 19:33:19,286 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Expected = This is a required field.
+2021-07-31 19:33:19,287 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:33:19,287 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:33:19,308 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Actual = This is a required field.
+2021-07-31 19:33:19,308 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Expected = This is a required field
+2021-07-31 19:34:51,553 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:34:51,594 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:34:51,621 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:34:51,890 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:34:51,940 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Actual = This is a required field.
+2021-07-31 19:34:51,940 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Expected = This is a required field.
+2021-07-31 19:34:51,941 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:34:51,941 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:34:51,966 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Actual = This is a required field.
+2021-07-31 19:34:51,967 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Expected = This is a required field
+2021-07-31 19:34:51,967 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:34:51,969 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 07 - Verify .....
+2021-07-31 19:34:52,044 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:34:52,044 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:34:52,044 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 08 - Verify .....
+2021-07-31 19:34:57,115 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:34:57,116 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:34:57,116 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 09 - Verify .....
+2021-07-31 19:34:57,153 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:34:57,153 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:34:57,153 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify .....
+2021-07-31 19:35:02,173 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:35:02,178 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:44:06,055 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:44:06,091 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:44:06,135 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:44:06,393 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:44:06,428 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:44:06,428 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:44:06,467 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:44:06,469 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 07 - Verify True.....
+2021-07-31 19:44:06,545 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:44:06,546 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:44:06,546 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 08 - Verify True.....
+2021-07-31 19:44:11,629 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:44:11,629 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:44:11,630 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 09 - Verify True.....
+2021-07-31 19:44:11,668 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:44:11,668 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:44:11,668 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify True.....
+2021-07-31 19:44:16,688 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:44:16,690 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:47:21,385 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:47:21,423 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:47:21,464 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:47:21,727 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:47:21,789 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:47:21,790 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:47:21,820 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:47:21,823 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 07 - Verify True.....
+2021-07-31 19:47:21,897 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:47:21,898 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:47:21,898 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 08 - Verify True.....
+2021-07-31 19:47:26,972 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:47:26,973 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:47:26,973 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 09 - Verify True.....
+2021-07-31 19:47:27,010 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:47:27,010 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:47:27,010 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify True.....
+2021-07-31 19:47:32,025 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:47:32,026 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:50:56,773 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:50:56,812 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:50:56,849 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:50:57,098 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify error message displayed
+2021-07-31 19:50:57,130 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:50:57,130 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify error message displayed
+2021-07-31 19:50:57,166 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:50:57,168 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 07 - Verify True.....
+2021-07-31 19:50:57,225 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:50:57,225 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:50:57,225 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 08 - Verify True.....
+2021-07-31 19:51:02,313 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:51:02,313 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:51:02,313 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 09 - Verify True.....
+2021-07-31 19:51:02,351 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE --------------------------
+2021-07-31 19:51:02,352 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED --------------------------
+2021-07-31 19:51:02,352 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify True.....
+2021-07-31 19:51:07,367 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE --------------------------
+2021-07-31 19:51:07,370 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED --------------------------
+2021-07-31 19:52:15,371 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- PASSED -------------------------- 
+2021-07-31 19:52:15,388 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- FAILED -------------------------- 
+2021-07-31 19:52:15,445 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- CONDITION TRUE -------------------------- 
+2021-07-31 19:52:15,445 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- PASSED -------------------------- 
+2021-07-31 19:52:20,516 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- CONDITION FALSE -------------------------- 
+2021-07-31 19:52:20,516 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- FAILED -------------------------- 
+2021-07-31 19:52:20,551 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- CONDITION TRUE -------------------------- 
+2021-07-31 19:52:20,551 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- PASSED -------------------------- 
+2021-07-31 19:52:25,579 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- CONDITION FALSE -------------------------- 
+2021-07-31 19:52:25,580 [INFO ] com.liveguru.user.Lv13_Soft_Assert -  -------------------------- FAILED -------------------------- 
+2021-07-31 19:58:55,397 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 01 - Input to email textbox
+2021-07-31 19:58:55,440 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 02 - Input to password textbox
+2021-07-31 19:58:55,496 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 03 - Click to Login button
+2021-07-31 19:58:55,755 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 05 - Verify Equal: error message
+2021-07-31 19:58:55,799 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED -------------------------- 
+2021-07-31 19:58:55,800 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 06 - Verify Equal: error message
+2021-07-31 19:58:55,830 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED -------------------------- 
+2021-07-31 19:58:55,831 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 07 - Verify True.
+2021-07-31 19:58:55,917 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE -------------------------- 
+2021-07-31 19:58:55,917 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED -------------------------- 
+2021-07-31 19:58:55,917 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 08 - Verify True.
+2021-07-31 19:59:00,973 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE -------------------------- 
+2021-07-31 19:59:00,974 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED -------------------------- 
+2021-07-31 19:59:00,974 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 09 - Verify True.
+2021-07-31 19:59:01,013 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION TRUE -------------------------- 
+2021-07-31 19:59:01,013 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- PASSED -------------------------- 
+2021-07-31 19:59:01,013 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log - Step 10 - Verify True.
+2021-07-31 19:59:06,039 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- CONDITION FALSE -------------------------- 
+2021-07-31 19:59:06,040 [INFO ] com.liveguru.user.Lv13_SoftAssert_Lv14_Log -  -------------------------- FAILED -------------------------- 

@@ -40,27 +40,30 @@ public class Lv13_Soft_Assert extends BaseTest {
 
         // First Pass (5)
         System.out.println("Step 05 - Verify error message displayed");
-        verifyEquals(driver.findElement(By.id("advice-required-entry-pass")).getText(), "This is a required field.");
+        checkEquals(driver.findElement(By.id("advice-required-entry-pass")).getText(), "This is a required field.");
 
         // Second Fail (10)
         System.out.println("Step 10 - Verify error message displayed");
-        verifyEquals(driver.findElement(By.id("advice-required-entry-email")).getText(), "This is a required field");
+        checkEquals(driver.findElement(By.id("advice-required-entry-email")).getText(), "This is a required field");
 
         // Pass (45)
         System.out.println("Step 45 - Verify .....");
-        verifyTrue(isElementDisplayed("//button[@id='send2']"));
+        checkTrue(isElementDisplayed("//button[@id='send2']"));
 
         // Third Fail (50)
         System.out.println("Step 50 - Verify .....");
-        verifyTrue(isElementDisplayed("//button[@id='send_failed_not_found']"));
+        checkTrue(isElementDisplayed("//button[@id='send_failed_not_found']"));
 
         // Pass (65)
         System.out.println("Step 65 - Verify .....");
-        verifyTrue(isElementDisplayed("//button[@id='send2']"));
+        checkTrue(isElementDisplayed("//button[@id='send2']"));
 
         // Fourth Fail (76)
         System.out.println("Step 76 - Verify .....");
-        verifyTrue(isElementDisplayed("//button[@id='send_failed_not_found']"));
+        checkTrue(isElementDisplayed("//button[@id='send_failed_not_found']"));
+
+        // Required
+        soft.assertAll();
     }
 
     @AfterClass
@@ -77,4 +80,38 @@ public class Lv13_Soft_Assert extends BaseTest {
             return false;
         }
     }
+
+    public boolean checkTrue(boolean condition) {
+        boolean pass = true;
+        try {
+            soft.assertTrue(condition);
+        } catch (Throwable e) {
+            System.out.println("Exception = " + e.getMessage());
+            pass = false;
+        }
+        return pass;
+    }
+
+    public boolean checkFalse(boolean condition) {
+        boolean pass = true;
+        try {
+            soft.assertFalse(condition);
+        } catch (Throwable e) {
+            System.out.println("Exception = " + e.getMessage());
+            pass = false;
+        }
+        return pass;
+    }
+
+    public boolean checkEquals(Object actual, Object expected) {
+        boolean pass = true;
+        try {
+            soft.assertEquals(actual, expected);
+        } catch (Throwable e) {
+            System.out.println("Exception = " + e.getMessage());
+            pass = false;
+        }
+        return pass;
+    }
+
 }

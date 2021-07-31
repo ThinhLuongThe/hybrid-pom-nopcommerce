@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="commons-codec-1.13">
+  <library name="WebdriverManager">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/browserDrivers/WebDriverManager4.2.0/commons-codec-1.13.jar!/" />
       <root url="jar://$PROJECT_DIR$/browserDrivers/WebDriverManager4.2.0/commons-collections4-4.3.jar!/" />

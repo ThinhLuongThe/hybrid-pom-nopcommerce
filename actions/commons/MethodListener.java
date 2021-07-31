@@ -1,6 +1,8 @@
 package commons;
 
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
 import org.testng.ITestResult;
@@ -12,12 +14,12 @@ import java.util.List;
 public class MethodListener implements IInvokedMethodListener {
     @Override
     public void beforeInvocation(IInvokedMethod method, ITestResult result) {
-//        log.debug("Before invocation of " + method.getTestMethod().getMethodName());
+        log.debug("Before invocation of " + method.getTestMethod().getMethodName());
     }
 
     @Override
     public void afterInvocation(IInvokedMethod method, ITestResult result) {
-//        log.debug("After invocation of " + method.getTestMethod().getMethodName());
+        log.debug("After invocation of " + method.getTestMethod().getMethodName());
         Reporter.setCurrentTestResult(result);
         if (method.isTestMethod()) {
             VerificationFailures allFailures = VerificationFailures.getFailures();
@@ -38,7 +40,7 @@ public class MethodListener implements IInvokedMethodListener {
                     StringBuffer message = new StringBuffer("Multiple failures (").append(size).append("):\n");
                     for (int failure = 0; failure < size - 1; failure++) {
                         message.append("Failure ").append(failure + 1).append(" of ").append(size).append("\n");
-                        message.append(Utils.longStackTrace(failures.get(failure), false)).append("\n");
+                        message.append(Utils.stackTrace(failures.get(failure), false)).append("\n");
                     }
                     Throwable last = failures.get(size - 1);
                     message.append("Failure ").append(size).append(" of ").append(size).append("\n");
@@ -51,5 +53,5 @@ public class MethodListener implements IInvokedMethodListener {
         }
     }
 
-//    private static final Log log = LogFactory.getLog(MethodListener.class);
+    private static final Log log = LogFactory.getLog(MethodListener.class);
 }
