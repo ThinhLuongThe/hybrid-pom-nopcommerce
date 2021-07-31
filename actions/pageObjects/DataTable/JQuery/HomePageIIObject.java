@@ -10,12 +10,12 @@ public class HomePageIIObject extends BasePage {
     }
 
     public void inputToColumnNameRowNumber(String columnName, String rowNumber, String value) {
-        String columnIndex = String.valueOf(getElementSize(HomePageIIUI.COLUMN_INDEX_LOCATOR, columnName) + 1);
+        String columnIndex = String.valueOf(getSizeOfElementList(HomePageIIUI.COLUMN_INDEX_LOCATOR, columnName) + 1);
         inputToElement(HomePageIIUI.ROW_INDEX_LOCATOR, value, rowNumber, columnIndex);
     }
 
     public void selectItemInColumnNameRowNumber(String columnName, String rowNumber, String value) {
-        String columnIndex = String.valueOf(getElementSize(HomePageIIUI.COLUMN_INDEX_LOCATOR, columnName) + 1);
+        String columnIndex = String.valueOf(getSizeOfElementList(HomePageIIUI.COLUMN_INDEX_LOCATOR, columnName) + 1);
         selectItemInDropDown(HomePageIIUI.DROPDOWN_ROW_INDEX_LOCATOR, value, rowNumber, columnIndex);
     }
 

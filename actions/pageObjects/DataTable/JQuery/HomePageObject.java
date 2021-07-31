@@ -28,6 +28,6 @@ public class HomePageObject extends BasePage {
     }
 
     public boolean isTheRowHidden(String femaleValue, String countryValue, String maleValue, String totalValue) {
-        return isElementInvisible(HomePageUI.DATA_OF_A_ROW_LOCATOR, femaleValue, countryValue, maleValue, totalValue);
+        return isElementUndisplayed(HomePageUI.DATA_OF_A_ROW_LOCATOR, femaleValue, countryValue, maleValue, totalValue);
     }
 }

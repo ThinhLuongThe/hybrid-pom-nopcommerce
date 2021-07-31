@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
 import pageObjects.nopCommerce.level02_newpagePageObject.*;
 import pageUIs.nopCommerce.BasePageUI;
 import pageUIs.nopCommerce.MyAccountPageUI;
@@ -14,6 +16,7 @@ import pageUIs.nopCommerce.MyAccountPageUI;
 import java.io.File;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     private WebDriver driver;
@@ -22,6 +25,7 @@ public class BasePage {
     private Actions actions;
     private JavascriptExecutor jsExecutor;
     private WebDriverWait explicitWait;
+    private int shortTimeOut = 5;
     private int longTimeOut = 20;
 
     public BasePage(WebDriver driver) {
@@ -193,7 +197,7 @@ public class BasePage {
         return Color.fromString(rgbaValue).asHex();
     }
 
-    public int getElementSize(String locator) {
+    public int getSizeOfElementList(String locator) {
         waitForElementVisible(locator);
         return getElementList(locator).size();
     }
@@ -367,6 +371,20 @@ public class BasePage {
         return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
     }
 
+    public boolean isElementUndisplayed(String locator) {
+        overrideGlobalTimeOut(shortTimeOut);
+        List<WebElement> elements = getElementList(locator);
+        overrideGlobalTimeOut(longTimeOut);
+
+        if (elements.size() == 0) {
+            return true;
+        } else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public Menu_CustomerInfoPageObject openCustomerInfoPage() {
         clickToElement(BasePageUI.CUSTOMERINFO_LINK);
         return Page_Generator.getCustomerInfoPage(driver);
@@ -442,7 +460,7 @@ public class BasePage {
         return waitForElementVisible(castRestParameter(locator, varArguments)).getCssValue(cssValue);
     }
 
-    public int getElementSize(String locator, String... varArguments) {
+    public int getSizeOfElementList(String locator, String... varArguments) {
         waitForElementVisible(castRestParameter(locator, varArguments));
         return getElementList(castRestParameter(locator, varArguments)).size();
     }
@@ -451,8 +469,28 @@ public class BasePage {
         return waitForElementVisible(castRestParameter(locator, varArguments)).isDisplayed();
     }
 
+    /* Use when check Element still exists in DOM */
     public boolean isElementInvisible(String locator, String... varArguments) {
         return waitForElementInvisible(castRestParameter(locator, varArguments));
+    }
+
+    /* Use when check Element does not exist in DOM */
+    public boolean isElementUndisplayed(String locator, String... varArguments) {
+        overrideGlobalTimeOut(shortTimeOut);
+        List<WebElement> elements = getElementList(castRestParameter(locator, varArguments));
+        overrideGlobalTimeOut(longTimeOut);
+
+        if (elements.size() == 0) {
+            return true;
+        } else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void overrideGlobalTimeOut(int timeInSecond) {
+        driver.manage().timeouts().implicitlyWait(timeInSecond, TimeUnit.SECONDS);
     }
 
     public boolean isElementSelected(String locator, String... varArguments) {

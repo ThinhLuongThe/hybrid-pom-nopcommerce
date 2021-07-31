@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Testcases for DataTable" parallel="false">
-    <parameter name="url" value="http://live.demoguru99.com/"/>
+<suite name="Testcases for Soft Assert" parallel="false">
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+    </listeners>
     <test name="Run on Chrome">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="url2" value="http://live.demoguru99.com/index.php/backendlogin/customer/"/>
-        <parameter name="adminUsername" value="user01"/>
-        <parameter name="adminPassword" value="guru99com"/>
         <classes>
-            <class name="com.liveguru.user.Lv09_POM_DataTable_liveguru"/>
+            <class name="com.liveguru.user.Lv13_Soft_Assert"/>
         </classes>
     </test>
 </suite>

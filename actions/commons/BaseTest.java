@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -14,6 +16,14 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     private WebDriver driver;
     private String projectPath = System.getProperty("user.dir");
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
+    }
 
     protected WebDriver getBrowserDriver(String browser, String url) {
         switch (browser.trim().toUpperCase()) {
@@ -50,6 +60,7 @@ public class BaseTest {
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        setDriver(driver);
         return driver;
     }
 
@@ -88,7 +99,12 @@ public class BaseTest {
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        setDriver(driver);
         return driver;
+    }
+
+    protected void removeDriver() {
+        getDriver().quit();
     }
 
     private String osName = System.getProperty("os.name");
@@ -105,5 +121,62 @@ public class BaseTest {
             folderName = null;
         }
         return folderName;
+    }
+
+    private boolean checkTrue(boolean condition) {
+        boolean pass = true;
+        try {
+            Assert.assertTrue(condition);
+        } catch (Throwable e) {
+            pass = false;
+
+            // Add lỗi vào ReportNG
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return pass;
+    }
+
+    protected boolean verifyTrue(boolean condition) {
+        return checkTrue(condition);
+    }
+
+    private boolean checkFailed(boolean condition) {
+        boolean pass = true;
+        try {
+            /*if (condition == false) {
+                log.info(" -------------------------- PASSED -------------------------- ");
+            } else {
+                log.info(" -------------------------- FAILED -------------------------- ");
+            }*/
+            Assert.assertFalse(condition);
+        } catch (Throwable e) {
+            pass = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return pass;
+    }
+
+    protected boolean verifyFalse(boolean condition) {
+        return checkFailed(condition);
+    }
+
+    private boolean checkEquals(Object actual, Object expected) {
+        boolean pass = true;
+        try {
+            Assert.assertEquals(actual, expected);
+//            log.info(" -------------------------- PASSED -------------------------- ");
+        } catch (Throwable e) {
+            pass = false;
+//            log.info(" -------------------------- FAILED -------------------------- ");
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return pass;
+    }
+
+    protected boolean verifyEquals(Object actual, Object expected) {
+        return checkEquals(actual, expected);
     }
 }
