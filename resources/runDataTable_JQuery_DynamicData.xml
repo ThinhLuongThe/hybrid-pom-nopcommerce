@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Testcases for DataTable" parallel="false">
-    <parameter name="url" value="https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/"/>
-    <test name="Run on Chrome">
+
+    <test name="Run DataTable for JQuery Dynamic Data">
+        <parameter name="url" value="https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/"/>
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.nopcommerce.user.Lv09_POM_DataTable_II"/>
+        </classes>
+    </test>
+
+    <test name="Run DataTable for JQuery">
+        <parameter name="url" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.nopcommerce.user.Lv09_POM_DataTable"/>
         </classes>
     </test>
 </suite>

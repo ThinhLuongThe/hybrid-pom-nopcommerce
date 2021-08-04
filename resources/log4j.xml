@@ -29,19 +29,19 @@
         </layout>
     </appender>
 
-<!--    <appender name="testng" class="commons.TestNGAppender">-->
-<!--        <param name="Threshold" value="INFO"/>-->
-<!--        <layout class="org.apache.log4j.PatternLayout">-->
-<!--    <param name="ConversionPattern" value="%d [%-5p] %c - %m%n"/>-->
-<!--        </layout>-->
-<!--    </appender>-->
+    <appender name="testng" class="commons.TestNGAppender">
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d [%-5p] %c - %m%n"/>
+        </layout>
+    </appender>
 
     <category name="com.liveguru.user">
         <priority value="all"/>
         <appender-ref ref="console"/>
         <appender-ref ref="logfile"/>
         <appender-ref ref="file"/>
-<!--        <appender-ref ref="testng"/>-->
+        <appender-ref ref="testng"/>
     </category>
 
     <category name="com.nopcommerce.user">
@@ -49,7 +49,7 @@
         <appender-ref ref="console"/>
         <appender-ref ref="logfile"/>
         <appender-ref ref="file"/>
-<!--        <appender-ref ref="testng"/>-->
+        <appender-ref ref="testng"/>
     </category>
 
     <category name="com.travelers">
@@ -57,7 +57,7 @@
         <appender-ref ref="console"/>
         <appender-ref ref="logfile"/>
         <appender-ref ref="file"/>
-<!--        <appender-ref ref="testng"/>-->
+        <appender-ref ref="testng"/>
     </category>
 
     <root>

@@ -33,16 +33,16 @@ public class Lv10_Upload_Files extends BaseTest {
 
     @Test
     public void TC02_Upload_Multiple_File() {
-        String[] fileNames = {"Bookshelf_Speakers.jpeg","Leaf.jpeg", "X_signal.jpeg"};
+        String[] fileNames = {"Bookshelf_Speakers.jpeg", "Leaf.jpeg", "X_signal.jpeg"};
         uploadPage.uploadFiles(fileNames);
         Assert.assertTrue(uploadPage.areFilenameLoaded(fileNames));
         uploadPage.clickToUploadBtn(fileNames);
         Assert.assertTrue(uploadPage.areFileUploaded(fileNames));
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
-//        driver.quit();
+        removeDriver();
     }
 
 }

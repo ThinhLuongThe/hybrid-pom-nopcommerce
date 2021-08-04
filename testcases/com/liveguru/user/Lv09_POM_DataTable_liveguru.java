@@ -1,6 +1,7 @@
 package com.liveguru.user;
 
 import commons.BaseTest;
+import commons.GlobalConstants;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -49,19 +50,19 @@ public class Lv09_POM_DataTable_liveguru extends BaseTest {
         Assert.assertTrue(dashboardPage.isSuccessMessageDisplayed());
     }
 
-    @Parameters({"url2", "adminUsername", "adminPassword"})
+    @Parameters({"url2"})
     @Test
-    public void TC02_AdminPage_Deal_with_Data(String url2, String adminUsername, String adminPassword) {
-        //Login
+    public void TC02_AdminPage_Deal_with_Data(String url2) {
+        log.info("Step 01: Login account");
         dashboardPage.openPageURL(url2);
         adminLoginPage = Page_Generator.getAdminLoginPage(driver);
 
-        adminLoginPage.inputToUsername(adminUsername);
-        adminLoginPage.inputToPassword(adminPassword);
+        adminLoginPage.inputToUsername(GlobalConstants.liveguruAdminUserName);
+        adminLoginPage.inputToPassword(GlobalConstants.liveguruAdminPassword);
         adminHomePage = adminLoginPage.clickToLogin();
         adminHomePage.clickToClosePopup();
 
-        //Searching data
+        log.info("Step 02: Searching Data");
         adminHomePage.searchOneColumn("Email", email);
         Assert.assertEquals(adminHomePage.getResultNumber(), 1);
         Assert.assertTrue(adminHomePage.isDataOfColumnDisplayedCorrectly("Email", email));
@@ -71,9 +72,9 @@ public class Lv09_POM_DataTable_liveguru extends BaseTest {
         Assert.assertTrue(adminHomePage.isDataOfColumnDisplayedCorrectly("Name", fullName));
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
-//        driver.quit();
+        removeDriver();
     }
 
     public String emailGenerator() {

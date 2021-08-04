@@ -17,7 +17,10 @@
     <orderEntry type="library" name="client-combined-3.141.59-sources" level="project" />
     <orderEntry type="library" name="WebdriverManager" level="project" />
     <orderEntry type="library" name="WebdriverManager" level="project" />
-    <orderEntry type="library" name="commons-codec-1.11" level="project" />
-    <orderEntry type="library" name="commons-codec-1.11" level="project" />
+    <orderEntry type="library" name="Log4J" level="project" />
+    <orderEntry type="library" name="ReportNG" level="project" />
+    <orderEntry type="library" name="Extent Report v2" level="project" />
+    <orderEntry type="library" name="Extent Report V4" level="project" />
+    <orderEntry type="library" name="Allure Report v2.13.5" level="project" />
   </component>
 </module>

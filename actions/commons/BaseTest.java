@@ -18,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     private WebDriver driver;
     private String projectPath = System.getProperty("user.dir");
+    protected static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
     protected final Log log;
 
     protected BaseTest() {
@@ -111,7 +112,47 @@ public class BaseTest {
     }
 
     protected void removeDriver() {
-        getDriver().quit();
+        try {
+            String osName = System.getProperty("os.name").toLowerCase();
+            log.info("OS name = " + osName);
+
+            if (getDriver() != null) {
+                getDriver().quit();
+            }
+
+            String cmd = "";
+            if (getDriver().toString().toLowerCase().contains("chrome")) {
+                if (osName.toLowerCase().contains("mac")) {
+                    cmd = "pkill chromedriver";
+                } else if (osName.toLowerCase().contains("windows")) {
+                    cmd = "taskkill /F /FI \"IMAGENAME eq chromedriver*\"";
+                }
+            } else if (getDriver().toString().toLowerCase().contains("internetexplorer")) {
+                if (osName.toLowerCase().contains("window")) {
+                    cmd = "taskkill /F /FI \"IMAGENAME eq IEDriverServer*\"";
+                }
+            } else if (getDriver().toString().toLowerCase().contains("firefox")) {
+                if (osName.toLowerCase().contains("mac")) {
+                    cmd = "pkill geckodriver";
+                } else if (osName.toLowerCase().contains("windows")) {
+                    cmd = "taskkill /F /FI \"IMAGENAME eq geckodriver*\"";
+                }
+            } else if (getDriver().toString().toLowerCase().contains("edge")) {
+                if (osName.toLowerCase().contains("mac")) {
+                    cmd = "pkill msedgedriver";
+                } else if (osName.toLowerCase().contains("windows")) {
+                    cmd = "taskkill /F /FI \"IMAGENAME eq msedgedriver*\"";
+                }
+            }
+
+            Process process = Runtime.getRuntime().exec(cmd);
+            process.waitFor();
+
+        } catch (Exception e) {
+            log.info(e.getMessage());
+        }
+
+        threadLocalDriver.remove();
     }
 
     private String osName = System.getProperty("os.name");
@@ -133,9 +174,9 @@ public class BaseTest {
     private boolean checkTrue(boolean condition) {
         boolean pass = true;
         try {
-            if (condition){
+            if (condition) {
                 log.info(" -------------------------- CONDITION TRUE -------------------------- ");
-            } else{
+            } else {
                 log.info(" -------------------------- CONDITION FALSE -------------------------- ");
             }
             Assert.assertTrue(condition);
@@ -157,9 +198,9 @@ public class BaseTest {
     private boolean checkFailed(boolean condition) {
         boolean pass = true;
         try {
-            if (condition){
+            if (condition) {
                 log.info(" -------------------------- CONDITION TRUE -------------------------- ");
-            } else{
+            } else {
                 log.info(" -------------------------- CONDITION FALSE -------------------------- ");
             }
             Assert.assertFalse(condition);
@@ -193,5 +234,28 @@ public class BaseTest {
 
     protected boolean verifyEquals(Object actual, Object expected) {
         return checkEquals(actual, expected);
+    }
+
+    public void deleteAllFilesInReportNGScreenshot() {
+        log.info("---------- START delete file in folder ----------");
+        deleteAllFileInFolder();
+        log.info("---------- END delete file in folder ----------");
+    }
+
+    public void deleteAllFileInFolder() {
+        try {
+            String workingDir = System.getProperty("user.dir");
+            String pathFolderDownload = workingDir + File.separator + "ReportNGScreenshots";
+            File file = new File(pathFolderDownload);
+            File[] listOfFiles = file.listFiles();
+            for (int i = 0; i < listOfFiles.length; i++) {
+                if (listOfFiles[i].isFile()) {
+                    log.info(listOfFiles[i].getName());
+                    new File(listOfFiles[i].toString()).delete();
+                }
+            }
+        } catch (Exception e) {
+            log.info(e.getMessage());
+        }
     }
 }

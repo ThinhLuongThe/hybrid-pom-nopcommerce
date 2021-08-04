@@ -1,7 +1,6 @@
 package com.nopcommerce.user;
 
 import commons.BaseTest;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -11,15 +10,12 @@ import pageObjects.DataTable.JQuery.Page_Generator;
 
 
 public class Lv09_POM_DataTable_II extends BaseTest {
-    private WebDriver driver;
     HomePageIIObject homePage;
-
 
     @Parameters({"browser", "url"})
     @BeforeClass
     public void beforeClass(String browserName, String url) {
-        driver = getBrowserDriver(browserName, url);
-        homePage = Page_Generator.getHomePageII(driver);
+        homePage = Page_Generator.getHomePageII(getBrowserDriver(browserName, url));
     }
 
     @Test
@@ -40,8 +36,8 @@ public class Lv09_POM_DataTable_II extends BaseTest {
         homePage.clickToActionOnRow("Remove", "1");
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
-//        driver.quit();
+        removeDriver();
     }
 }
