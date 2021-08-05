@@ -1,3 +1,4 @@
+/*
 package reportConfig.ExtentReportV2;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -63,4 +64,4 @@ public class ExtentReportListener implements IReporter {
         test.log(LogStatus.INFO, message);
         Reporter.log(message);
     }
-}
+}*/

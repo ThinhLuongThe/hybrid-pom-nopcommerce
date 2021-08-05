@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/testcases" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testdata" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/ExtentReportV2" />
+      <excludeFolder url="file://$MODULE_DIR$/logFile" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -23,5 +24,8 @@
     <orderEntry type="library" name="Extent Report v2" level="project" />
     <orderEntry type="library" name="Extent Report V4" level="project" />
     <orderEntry type="library" name="Allure Report v2.13.5" level="project" />
+    <orderEntry type="library" name="ReportNG" level="project" />
+    <orderEntry type="library" name="Extent_Report_V4" level="project" />
+    <orderEntry type="library" name="Allure_Report-2.13.5" level="project" />
   </component>
 </module>

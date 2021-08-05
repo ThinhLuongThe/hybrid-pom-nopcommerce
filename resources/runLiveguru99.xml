@@ -8,7 +8,7 @@
         <!--        <listener class-name="reportConfig.ExtentReportV2.ExtentReportListener"/>-->
         <!--        <listener class-name="reportConfig.ExtentReportV3.ExtentTestListener"/>-->
         <listener class-name="reportConfig.ExtentReportV4.ExtentReportListener"/>
-        <listener class-name="reportConfig.AllureReport.AllureTestListener"/>
+<!--        <listener class-name="reportConfig.AllureReport.AllureTestListener"/>-->
     </listeners>
 
     <test name="Run to check ReportNG">

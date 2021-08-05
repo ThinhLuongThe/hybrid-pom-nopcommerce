@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Extent_Report_V4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/bsh-2.0b4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/bson-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/extentreports-4.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/freemarker-2.3.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/gson-2.8.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/httpclient-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/httpcore-4.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/httpmime-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/jcommander-1.48.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/mongodb-driver-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logLibraries/Extent Report V4/mongodb-driver-core-3.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
