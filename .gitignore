@@ -1,2 +1,8 @@
 # Project exclude paths
 /out/
+/allure-json/
+/ExtentReportV2/
+/ExtentReportV3/
+/ExtentReportV4/
+/logFile/
+/test-output/

@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/testcase" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testcases" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testdata" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/ExtentReportV2" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
