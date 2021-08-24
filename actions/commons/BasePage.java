@@ -366,11 +366,16 @@ public class BasePage {
             log.debug("Wait for element Invisible with erroe: " + e.getMessage());
             return false;
         }
+
+    }
+
+    public List<WebElement> waitForAllElementVisible(String locator) {
+        return explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(locator)));
     }
 
     public boolean isElementUndisplayed(String locator) {
         overrideGlobalTimeOut(shortTimeOut);
-        List<WebElement> elements = getElementList(locator);
+        List<WebElement> elements = waitForAllElementVisible(locator);
         overrideGlobalTimeOut(longTimeOut);
 
         if (elements.size() == 0) {
@@ -473,7 +478,7 @@ public class BasePage {
     /* Use when check Element does not exist in DOM */
     public boolean isElementUndisplayed(String locator, String... varArguments) {
         overrideGlobalTimeOut(shortTimeOut);
-        List<WebElement> elements = getElementList(castRestParameter(locator, varArguments));
+        List<WebElement> elements = waitForAllElementVisible(castRestParameter(locator, varArguments));
         overrideGlobalTimeOut(longTimeOut);
 
         if (elements.size() == 0) {
