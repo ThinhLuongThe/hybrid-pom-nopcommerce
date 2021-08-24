@@ -1,6 +1,7 @@
 package commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Step;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
@@ -191,6 +192,7 @@ public class BaseTest {
         return pass;
     }
 
+    @Step("Verify True with condition is: {0}")
     protected boolean verifyTrue(boolean condition) {
         return checkTrue(condition);
     }
@@ -214,6 +216,7 @@ public class BaseTest {
         return pass;
     }
 
+    @Step("Verify False with condition is: {0}")
     protected boolean verifyFalse(boolean condition) {
         return checkFailed(condition);
     }
@@ -232,6 +235,7 @@ public class BaseTest {
         return pass;
     }
 
+    @Step("Verify Equals")
     protected boolean verifyEquals(Object actual, Object expected) {
         return checkEquals(actual, expected);
     }

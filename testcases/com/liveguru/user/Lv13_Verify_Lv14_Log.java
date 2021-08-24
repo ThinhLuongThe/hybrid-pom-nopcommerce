@@ -2,6 +2,7 @@ package com.liveguru.user;
 
 import commons.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -27,6 +28,7 @@ public class Lv13_Verify_Lv14_Log extends BaseTest {
         deleteAllFilesInReportNGScreenshot();
     }
 
+    @Description("To test Login function with empty Email, empty Password")
     @Test
     public void TC_01_Login_Empty_Email_Password() {
         log.info("Step 01 - Input to email textbox");
@@ -61,7 +63,13 @@ public class Lv13_Verify_Lv14_Log extends BaseTest {
 
         // Third Fail (10)
         log.info("Step 10 - Verify True.");
-        verifyTrue(isElementDisplayed("//button[@id='send_failed_not_found']"));
+        verifyFalse(isElementDisplayed("//button[@id='send_failed_not_found']"));
+    }
+
+    @Description("To test Login function with empty Email, empty Password")
+    @Test
+    public void TC_02_Login_Valid_Email_Password() {
+
     }
 
     @AfterClass(alwaysRun = true)

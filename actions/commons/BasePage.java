@@ -1,5 +1,7 @@
 package commons;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -7,8 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.Reporter;
 import pageObjects.nopCommerce.level02_newpagePageObject.*;
 import pageUIs.nopCommerce.BasePageUI;
 import pageUIs.nopCommerce.MyAccountPageUI;
@@ -27,9 +27,13 @@ public class BasePage {
     private WebDriverWait explicitWait;
     private int shortTimeOut = 5;
     private int longTimeOut = 20;
+    protected final Log log;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        log = LogFactory.getLog(getClass());
+        explicitWait = new WebDriverWait(driver, longTimeOut);
+        actions = new Actions(driver);
     }
 
     public void openPageURL(String pageURL) {
@@ -61,7 +65,6 @@ public class BasePage {
     }
 
     public Alert waitForAlertPresence() {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
         return explicitWait.until(ExpectedConditions.alertIsPresent());
     }
 
@@ -163,7 +166,6 @@ public class BasePage {
 
     public void selectItemInCustomDropdown(String parentLocator, String childItemLocator, String expectedItem) {
         waitForElementClickable(parentLocator).click();
-        explicitWait = new WebDriverWait(driver, longTimeOut);
         List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childItemLocator)));
 
         for (WebElement item : allItems) {
@@ -198,7 +200,6 @@ public class BasePage {
     }
 
     public int getSizeOfElementList(String locator) {
-        waitForElementVisible(locator);
         return getElementList(locator).size();
     }
 
@@ -239,27 +240,22 @@ public class BasePage {
     }
 
     public void doubleClickToElement(String locator) {
-        actions = new Actions(driver);
         actions.doubleClick(getElement(locator)).perform();
     }
 
     public void hoverMouseToElement(String locator) {
-        actions = new Actions(driver);
         actions.moveToElement(getElement(locator)).perform();
     }
 
     public void righClickToElement(String locator) {
-        actions = new Actions(driver);
         actions.contextClick(getElement(locator)).perform();
     }
 
     public void dragAndDrop(String sourceLocator, String targetLocator) {
-        actions = new Actions(driver);
         actions.dragAndDrop(getElement(sourceLocator), getElement(targetLocator)).perform();
     }
 
     public void sendKeyboardToElement(String locator, Keys key) {
-        actions = new Actions(driver);
         actions.sendKeys(getElement(locator), key).perform();
     }
 
@@ -319,7 +315,6 @@ public class BasePage {
     }
 
     public boolean areJQueryAndJSLoadedSuccess() {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
         jsExecutor = (JavascriptExecutor) driver;
 
         ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
@@ -357,18 +352,20 @@ public class BasePage {
     }
 
     public WebElement waitForElementClickable(String locator) {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
         return explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
     }
 
     public WebElement waitForElementVisible(String locator) {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
         return explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
     }
 
     public boolean waitForElementInvisible(String locator) {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
-        return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+        try {
+            return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+        } catch (Exception e) {
+            log.debug("Wait for element Invisible with erroe: " + e.getMessage());
+            return false;
+        }
     }
 
     public boolean isElementUndisplayed(String locator) {
@@ -461,7 +458,6 @@ public class BasePage {
     }
 
     public int getSizeOfElementList(String locator, String... varArguments) {
-        waitForElementVisible(castRestParameter(locator, varArguments));
         return getElementList(castRestParameter(locator, varArguments)).size();
     }
 
@@ -516,22 +512,23 @@ public class BasePage {
     }
 
     public WebElement waitForElementVisible(String locator, String... varArguments) {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
         return explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(castRestParameter(locator, varArguments))));
     }
 
     public WebElement waitForElementClickable(String locator, String... varArguments) {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
         return explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(castRestParameter(locator, varArguments))));
     }
 
     public boolean waitForElementInvisible(String locator, String... varArguments) {
-        explicitWait = new WebDriverWait(driver, longTimeOut);
-        return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(castRestParameter(locator, varArguments))));
+        try {
+            return explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(castRestParameter(locator, varArguments))));
+        } catch (Exception e) {
+            log.debug("Wait for element Invisible with erroe: " + e.getMessage());
+            return false;
+        }
     }
 
     public void sendKeyboardToElement(String locator, Keys key, String... varArguments) {
-        actions = new Actions(driver);
         actions.sendKeys(getElement(castRestParameter(locator, varArguments)), key).perform();
     }
 
