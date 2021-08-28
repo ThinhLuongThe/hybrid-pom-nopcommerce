@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.Set;
 
-public class BasePageFactory {
+public class BasePage_Factory {
     private WebDriver driver;
     private Alert alert;
     private Select select;
@@ -20,7 +20,7 @@ public class BasePageFactory {
     private WebDriverWait explicitWait;
     private int longTimeOut = 30;
 
-    public BasePageFactory(WebDriver driver) {
+    public BasePage_Factory(WebDriver driver) {
         this.driver = driver;
     }
 

@@ -115,7 +115,6 @@ public class BaseTest {
     protected void removeDriver() {
         try {
             String osName = System.getProperty("os.name").toLowerCase();
-            log.info("OS name = " + osName);
 
             if (getDriver() != null) {
                 getDriver().quit();

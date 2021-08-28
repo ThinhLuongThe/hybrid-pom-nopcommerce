@@ -1,6 +1,6 @@
 package pageFactory.nopcommerce;
 
-import commons.BasePageFactory;
+import commons.BasePage_Factory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePageObject extends BasePageFactory {
+public class HomePageObject extends BasePage_Factory {
     public HomePageObject(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.Set;
 
-public class Level_03_BasePage {
+public class BasePage_Level03 {
     private WebDriverWait explicitWait;
     private JavascriptExecutor jsExecutor;
     private int longTimeOut = 30;

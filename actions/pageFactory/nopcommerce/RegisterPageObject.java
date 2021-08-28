@@ -1,12 +1,12 @@
 package pageFactory.nopcommerce;
 
-import commons.BasePageFactory;
+import commons.BasePage_Factory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegisterPageObject extends BasePageFactory {
+public class RegisterPageObject extends BasePage_Factory {
     public RegisterPageObject(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);

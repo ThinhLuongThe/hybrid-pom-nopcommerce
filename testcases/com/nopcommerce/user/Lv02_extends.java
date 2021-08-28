@@ -1,6 +1,6 @@
 package com.nopcommerce.user;
 
-import commons.Level_03_BasePage;
+import commons.BasePage_Level03;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-public class Lv02_extends extends Level_03_BasePage {
+public class Lv02_extends extends BasePage_Level03 {
     WebDriver driver;
     String projectPath = System.getProperty("user.dir");
 

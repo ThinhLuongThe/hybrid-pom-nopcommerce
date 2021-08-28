@@ -61,7 +61,7 @@ public class Lv13_Verify_Lv14_Log extends BaseTest {
         log.info("Step 09 - Verify True.");
         verifyTrue(isElementDisplayed("//button[@id='send2']"));
 
-        // Third Fail (10)
+        // Pass (10)
         log.info("Step 10 - Verify True.");
         verifyFalse(isElementDisplayed("//button[@id='send_failed_not_found']"));
     }

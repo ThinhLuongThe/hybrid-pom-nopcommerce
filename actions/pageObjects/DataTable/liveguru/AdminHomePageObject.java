@@ -15,13 +15,13 @@ public class AdminHomePageObject extends BasePage {
 
     public void searchOneColumn(String columnName, String value) {
         clickToElement(AdminHomePageUI.RESET_SEARCH_BTN);
-        waitForElementInvisible(AdminHomePageUI.LOADING_ICON_LOCATOR);
+        isElementInvisible(AdminHomePageUI.LOADING_ICON_LOCATOR);
 
         String columnIndex = String.valueOf(getSizeOfElementList(AdminHomePageUI.RP_COLUMN_INDEX_LOCATOR, columnName) + 1);
         inputToElement(AdminHomePageUI.RP_TARGET_TXT, value, columnIndex);
 
         clickToElement(AdminHomePageUI.SEARCH_BTN);
-        waitForElementInvisible(AdminHomePageUI.LOADING_ICON_LOCATOR);
+        isElementInvisible(AdminHomePageUI.LOADING_ICON_LOCATOR);
     }
 
 
