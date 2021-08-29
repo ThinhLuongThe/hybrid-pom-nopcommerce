@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class Wait {
     protected WebDriver driver;
     protected WebDriverWait explicitWait;
-    protected final Log log;
+    protected Log log;
 
     public Wait(WebDriver driver) {
         this.driver = driver;

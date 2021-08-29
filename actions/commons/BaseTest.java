@@ -174,15 +174,15 @@ public class BaseTest {
     private boolean checkTrue(boolean condition) {
         boolean pass = true;
         try {
-            if (condition) {
-                log.info(" -------------------------- CONDITION TRUE -------------------------- ");
-            } else {
-                log.info(" -------------------------- CONDITION FALSE -------------------------- ");
-            }
+//            if (condition) {
+//                log.info(" -------------------------- CONDITION TRUE -------------------------- ");
+//            } else {
+//                log.info(" -------------------------- CONDITION FALSE -------------------------- ");
+//            }
             Assert.assertTrue(condition);
-            log.info(" -------------------------- PASSED -------------------------- ");
+//            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
-            log.info(" -------------------------- FAILED -------------------------- ");
+//            log.info(" -------------------------- FAILED -------------------------- ");
             pass = false;
             // Add lỗi vào ReportNG
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
@@ -199,15 +199,15 @@ public class BaseTest {
     private boolean checkFailed(boolean condition) {
         boolean pass = true;
         try {
-            if (condition) {
-                log.info(" -------------------------- CONDITION TRUE -------------------------- ");
-            } else {
-                log.info(" -------------------------- CONDITION FALSE -------------------------- ");
-            }
+//            if (condition) {
+//                log.info(" -------------------------- CONDITION TRUE -------------------------- ");
+//            } else {
+//                log.info(" -------------------------- CONDITION FALSE -------------------------- ");
+//            }
             Assert.assertFalse(condition);
-            log.info(" -------------------------- PASSED -------------------------- ");
+//            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
-            log.info(" -------------------------- FAILED -------------------------- ");
+//            log.info(" -------------------------- FAILED -------------------------- ");
             pass = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
@@ -224,9 +224,9 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertEquals(actual, expected);
-            log.info(" -------------------------- PASSED -------------------------- ");
+//            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
-            log.info(" -------------------------- FAILED -------------------------- ");
+//            log.info(" -------------------------- FAILED -------------------------- ");
             pass = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
@@ -243,6 +243,15 @@ public class BaseTest {
         log.info("---------- START delete file in folder ----------");
         deleteAllFileInFolder();
         log.info("---------- END delete file in folder ----------");
+    }
+
+
+    public void sleepInSecond(long second) {
+        try {
+            Thread.sleep(second * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void deleteAllFileInFolder() {

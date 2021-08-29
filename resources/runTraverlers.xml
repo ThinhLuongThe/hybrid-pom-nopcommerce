@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Testcases for Travelers" parallel="false">
-    <parameter name="url" value="https://blueimp.github.io/jQuery-File-Upload/"/>
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="reportConfig.ExtentReportV4.ExtentReportListener"/>
+    </listeners>
+
+    <!--    <test name="Run on Chrome">-->
+    <!--        <parameter name="browser" value="chrome"/>-->
+    <!--        <parameter name="url" value="https://blueimp.github.io/jQuery-File-Upload/"/>-->
+    <!--        <classes>-->
+    <!--            <class name="com.travelers.upload.Lv10_Upload_Files"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
     <test name="Run on Chrome">
         <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://cellphones.com.vn/mobile/apple.html"/>
         <classes>
-            <class name="com.travelers.Lv10_Upload_Files"/>
+            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_CellphoneS"/>
         </classes>
     </test>
+
+<!--    <test name="Run on Chrome">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="url" value="https://www.h2shop.vn/dien-thoai-smartphone"/>-->
+<!--        <classes>-->
+<!--            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_H2Shop"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

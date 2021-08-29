@@ -1,8 +1,8 @@
-package pageObjects.travellers;
+package pageObjects.travellers.upload;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.travellers.UploadPageUI;
+import pageUIs.travellers.upload.UploadPageUI;
 
 public class UploadPageObject extends BasePage {
     public UploadPageObject(WebDriver driver) {

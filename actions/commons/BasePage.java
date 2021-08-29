@@ -1,5 +1,6 @@
 package commons;
 
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -7,12 +8,16 @@ import pageObjects.nopCommerce.level02_newpagePageObject.*;
 import pageUIs.nopCommerce.BasePageUI;
 import pageUIs.nopCommerce.MyAccountPageUI;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 public class BasePage extends BaseAction {
 
     public BasePage(WebDriver driver) {
         super(driver);
+        log = LogFactory.getLog(getClass());
     }
 
     public void clickToElement(String locator) {
@@ -30,6 +35,10 @@ public class BasePage extends BaseAction {
         } catch (Exception e) {
             log.debug("Wait for text is input with error: " + e.getMessage());
         }
+    }
+
+    public String getTextElement(String locator) {
+        return waitForElementVisible(locator).getText();
     }
 
     public boolean isElementDisplayed(String locator) {
@@ -81,10 +90,6 @@ public class BasePage extends BaseAction {
         return waitForElementVisible(locator).getAttribute(attributeName);
     }
 
-    public String getTextElement(String locator) {
-        return waitForElementVisible(locator).getText();
-    }
-
     public String getCssValue(String locator, String cssValue) {
         return waitForElementVisible(locator).getCssValue(cssValue);
     }
@@ -133,6 +138,10 @@ public class BasePage extends BaseAction {
         getElement(castRestParameter(locator, varArguments)).sendKeys(inputValue);
     }
 
+    public String getTextElement(String locator, String... varArguments) {
+        return waitForElementVisible(castRestParameter(locator, varArguments)).getText();
+    }
+
     public boolean isElementDisplayed(String locator, String... varArguments) {
         try {
             return waitForElementVisible(castRestParameter(locator, varArguments)).isDisplayed();
@@ -167,6 +176,105 @@ public class BasePage extends BaseAction {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public boolean isPriceSortedASC(String locator) {
+        ArrayList actualList = new ArrayList();
+        ArrayList sortedList = new ArrayList();
+        List<WebElement> elements = waitForAllElementVisible(locator);
+
+        for (WebElement element : elements) {
+            long currency = Long.parseLong(element.getText().replace("₫", "").replace(".", "").trim());
+            actualList.add(currency);
+            sortedList.add(currency);
+            log.info(currency);
+        }
+        Collections.sort(sortedList);
+
+        return actualList.equals(sortedList);
+    }
+
+    public boolean isPriceSortedDESC(String locator) {
+        ArrayList actualList = new ArrayList();
+        ArrayList sortedList = new ArrayList();
+        List<WebElement> elements = waitForAllElementVisible(locator);
+
+        for (WebElement element : elements) {
+            long currency = Long.parseLong(element.getText().replace("₫", "").replace(".", "").trim());
+            actualList.add(currency);
+            sortedList.add(currency);
+            log.info(currency);
+        }
+
+        Collections.sort(sortedList);
+        Collections.reverse(sortedList);
+
+        return actualList.equals(sortedList);
+    }
+
+    public HashMap<String, String> getItemListOfProduct_HashMap(String itemListLocator, String nameLocatorByIndex, String priceLocatorByIndex) {
+        HashMap<String, String> productList = new HashMap<>();
+
+        int sizeList = getSizeOfElementList(itemListLocator);
+        for (int i = 1; i <= sizeList; i++) {
+            String productName = getTextElement(nameLocatorByIndex, String.valueOf(i));
+            String productPrice = getTextElement(priceLocatorByIndex, String.valueOf(i));
+            System.out.println(productName + " - " + productPrice);
+            productList.put(productName, productPrice);
+        }
+        return productList;
+    }
+
+    public HashMap<String, String> getItemListOfSpecificProduct_HashMap(String itemListLocator, String nameLocatorByIndex, String priceLocatorByIndex, String specificName) {
+        HashMap<String, String> productList = new HashMap<>();
+
+        int sizeList = getSizeOfElementList(itemListLocator, specificName);
+        for (int i = 1; i <= sizeList; i++) {
+            String productName = getTextElement(nameLocatorByIndex, specificName, String.valueOf(i));
+            String productPrice = getTextElement(priceLocatorByIndex, specificName, String.valueOf(i));
+            productList.put(productName, productPrice);
+            System.out.println(productName + " - " + productPrice);
+        }
+        return productList;
+    }
+
+    public void printItemListOfProduct_HashMap(HashMap<String, String> products) {
+        System.out.println("\nList of expected Products:");
+        for (String index : products.keySet()) {
+            System.out.println(index + " - " + products.get(index));
+        }
+    }
+
+    public String[][] getItemListOfProduct(String itemListLocator, String nameLocatorByIndex, String priceLocatorByIndex) {
+        int sizeList = getSizeOfElementList(itemListLocator);
+        String[][] productList = new String[sizeList][2];
+
+        for (int i = 0; i < sizeList; i++) {
+            String productName = getTextElement(nameLocatorByIndex, String.valueOf(i + 1));
+            String productPrice = getTextElement(priceLocatorByIndex, String.valueOf(i + 1));
+            productList[i][0] = productName;
+            productList[i][1] = productPrice;
+        }
+        return productList;
+    }
+
+    public String[][] getItemListOfSpecificProduct(String itemListLocator, String nameLocatorByIndex, String priceLocatorByIndex, String specificName) {
+        int sizeList = getSizeOfElementList(itemListLocator, specificName);
+        String[][] productList = new String[sizeList][2];
+
+        for (int i = 0; i < sizeList; i++) {
+            String productName = getTextElement(nameLocatorByIndex, specificName, String.valueOf(i + 1));
+            String productPrice = getTextElement(priceLocatorByIndex, specificName, String.valueOf(i + 1));
+            productList[i][0] = productName;
+            productList[i][1] = productPrice;
+        }
+        return productList;
+    }
+
+    public void printItemListOfProduct(String[][] products) {
+        for (int i = 0; i < products.length; i++) {
+            System.out.println(products[i][0] + " - " + products[i][1]);
         }
     }
 
@@ -216,4 +324,5 @@ public class BasePage extends BaseAction {
     public void openTargetSubPage_II(String pageName) {
         clickToElement(MyAccountPageUI.DYNAMIC_MENU_PAGE_LINK, pageName);
     }
+
 }

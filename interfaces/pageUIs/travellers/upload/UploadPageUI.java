@@ -1,4 +1,4 @@
-package pageUIs.travellers;
+package pageUIs.travellers.upload;
 
 public class UploadPageUI {
     public static final String FILENAME_LOCATOR = "//p[@class='name' and text()='%s']";

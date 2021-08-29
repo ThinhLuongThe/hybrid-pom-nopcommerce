@@ -151,7 +151,7 @@ public class BaseAction extends BaseJSAction {
     }
 
     public int getSizeOfElementList(String locator) {
-        return getElementList(locator).size();
+        return waitForAllElementVisible(locator).size();
     }
 
     public int getSizeOfElementList(String locator, String... varArguments) {

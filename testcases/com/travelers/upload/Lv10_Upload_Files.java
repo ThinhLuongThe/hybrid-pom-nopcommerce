@@ -1,4 +1,4 @@
-package com.travelers;
+package com.travelers.upload;
 
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.travellers.UploadPageObject;
+import pageObjects.travellers.upload.UploadPageObject;
 import pageObjects.travellers.Page_Generator;
 
 

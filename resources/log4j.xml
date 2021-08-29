@@ -52,7 +52,14 @@
         <appender-ref ref="testng"/>
     </category>
 
-    <category name="com.travelers">
+    <category name="com.travelers.sort">
+        <priority value="all"/>
+        <appender-ref ref="console"/>
+        <appender-ref ref="logfile"/>
+        <appender-ref ref="file"/>
+        <appender-ref ref="testng"/>
+    </category>
+    <category name="pageObjects.travellers.sort">
         <priority value="all"/>
         <appender-ref ref="console"/>
         <appender-ref ref="logfile"/>
