@@ -16,6 +16,7 @@ public class BaseAction extends BaseJSAction {
 
     public BaseAction(WebDriver driver) {
         super(driver);
+        actions = new Actions(driver);
     }
 
     public void openPageURL(String pageURL) {
@@ -163,7 +164,7 @@ public class BaseAction extends BaseJSAction {
     }
 
     public void hoverMouseToElement(String locator) {
-        actions.moveToElement(getElement(locator)).perform();
+        actions.moveToElement(waitForElementVisible(locator)).perform();
     }
 
     public void righClickToElement(String locator) {

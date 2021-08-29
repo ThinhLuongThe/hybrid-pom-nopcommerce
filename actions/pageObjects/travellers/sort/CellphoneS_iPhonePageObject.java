@@ -18,11 +18,11 @@ public class CellphoneS_iPhonePageObject extends BasePage {
     }
 
     public boolean isPriceSortedASC() {
-        return isPriceSortedASC(CellphoneS_iPhonePageUI.ALL_PRODUCT_PRICES);
+        return isPriceSortedASCwithCurrency(CellphoneS_iPhonePageUI.ALL_PRODUCT_PRICES, "₫");
     }
 
     public boolean isPriceSortedDESC() {
-        return isPriceSortedDESC(CellphoneS_iPhonePageUI.ALL_PRODUCT_PRICES);
+        return isPriceSortedDESCwithCurrency(CellphoneS_iPhonePageUI.ALL_PRODUCT_PRICES, "₫");
     }
 
     public void clickToCloseBanner() {

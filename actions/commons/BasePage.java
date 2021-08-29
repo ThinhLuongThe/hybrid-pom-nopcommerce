@@ -14,6 +14,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class BasePage extends BaseAction {
+    private final int arrayName = 0;
+    private final int arrayPrice = 1;
 
     public BasePage(WebDriver driver) {
         super(driver);
@@ -179,38 +181,84 @@ public class BasePage extends BaseAction {
         }
     }
 
-    public boolean isPriceSortedASC(String locator) {
+    public boolean isPriceSortedASCwithCurrency(String locator, String currency) {
         ArrayList actualList = new ArrayList();
         ArrayList sortedList = new ArrayList();
         List<WebElement> elements = waitForAllElementVisible(locator);
 
         for (WebElement element : elements) {
-            long currency = Long.parseLong(element.getText().replace("₫", "").replace(".", "").trim());
-            actualList.add(currency);
-            sortedList.add(currency);
-            log.info(currency);
+            long price = parsePriceOnCurrency(element.getText(), currency);
+            actualList.add(price);
+            sortedList.add(price);
+            log.info(price);
         }
         Collections.sort(sortedList);
 
         return actualList.equals(sortedList);
     }
 
-    public boolean isPriceSortedDESC(String locator) {
+    public boolean isPriceSortedDESCwithCurrency(String locator, String currency) {
         ArrayList actualList = new ArrayList();
         ArrayList sortedList = new ArrayList();
         List<WebElement> elements = waitForAllElementVisible(locator);
 
         for (WebElement element : elements) {
-            long currency = Long.parseLong(element.getText().replace("₫", "").replace(".", "").trim());
-            actualList.add(currency);
-            sortedList.add(currency);
-            log.info(currency);
+            long price = parsePriceOnCurrency(element.getText(), currency);
+            actualList.add(price);
+            sortedList.add(price);
+            log.info(price);
         }
 
         Collections.sort(sortedList);
         Collections.reverse(sortedList);
 
         return actualList.equals(sortedList);
+    }
+
+    public String[][] sortPriceASCwithCurrency(String[][] originList, String currency) {
+        String temp;
+        long before, after;
+
+        for (int i = 0; i < originList.length - 1; i++) {
+            for (int j = i + 1; j < originList.length; j++) {
+                before = parsePriceOnCurrency(originList[i][arrayPrice], currency);
+                after = parsePriceOnCurrency(originList[j][arrayPrice], currency);
+
+                if (after < before) {
+                    temp = originList[i][arrayPrice];
+                    originList[i][arrayPrice] = originList[j][arrayPrice];
+                    originList[j][arrayPrice] = temp;
+
+                    temp = originList[i][arrayName];
+                    originList[i][arrayName] = originList[j][arrayName];
+                    originList[j][arrayName] = temp;
+                }
+            }
+        }
+        return originList;
+    }
+
+    public String[][] sortPriceDESCwithCurrency(String[][] originList, String currency) {
+        String temp;
+        long before, after;
+
+        for (int i = 0; i < originList.length - 1; i++) {
+            for (int j = i + 1; j < originList.length; j++) {
+                before = parsePriceOnCurrency(originList[i][arrayPrice], currency);
+                after = parsePriceOnCurrency(originList[j][arrayPrice], currency);
+
+                if (after < before) {
+                    temp = originList[i][arrayPrice];
+                    originList[i][arrayPrice] = originList[j][arrayPrice];
+                    originList[j][arrayPrice] = temp;
+
+                    temp = originList[i][arrayName];
+                    originList[i][arrayName] = originList[j][arrayName];
+                    originList[j][arrayName] = temp;
+                }
+            }
+        }
+        return originList;
     }
 
     public HashMap<String, String> getItemListOfProduct_HashMap(String itemListLocator, String nameLocatorByIndex, String priceLocatorByIndex) {
@@ -247,34 +295,45 @@ public class BasePage extends BaseAction {
     }
 
     public String[][] getItemListOfProduct(String itemListLocator, String nameLocatorByIndex, String priceLocatorByIndex) {
+        waitForAllElementVisible(castRestParameter(itemListLocator));
         int sizeList = getSizeOfElementList(itemListLocator);
         String[][] productList = new String[sizeList][2];
 
         for (int i = 0; i < sizeList; i++) {
             String productName = getTextElement(nameLocatorByIndex, String.valueOf(i + 1));
             String productPrice = getTextElement(priceLocatorByIndex, String.valueOf(i + 1));
-            productList[i][0] = productName;
-            productList[i][1] = productPrice;
+            productList[i][arrayName] = productName;
+            productList[i][arrayPrice] = productPrice;
         }
         return productList;
     }
 
     public String[][] getItemListOfSpecificProduct(String itemListLocator, String nameLocatorByIndex, String priceLocatorByIndex, String specificName) {
+        waitForAllElementVisible(castRestParameter(itemListLocator, specificName));
         int sizeList = getSizeOfElementList(itemListLocator, specificName);
         String[][] productList = new String[sizeList][2];
 
         for (int i = 0; i < sizeList; i++) {
             String productName = getTextElement(nameLocatorByIndex, specificName, String.valueOf(i + 1));
             String productPrice = getTextElement(priceLocatorByIndex, specificName, String.valueOf(i + 1));
-            productList[i][0] = productName;
-            productList[i][1] = productPrice;
+            productList[i][arrayName] = productName;
+            productList[i][arrayPrice] = productPrice;
         }
         return productList;
     }
 
+    public long parsePriceOnCurrency(String targetPrice, String currency) {
+        switch (currency) {
+            case "₫":
+                return Long.parseLong(targetPrice.replace("₫", "").replace(".", "").replace(",", "").trim());
+            default:
+                return Long.parseLong(targetPrice.replace("VNĐ", "").replace(".", "").replace(",", "").trim());
+        }
+    }
+
     public void printItemListOfProduct(String[][] products) {
         for (int i = 0; i < products.length; i++) {
-            System.out.println(products[i][0] + " - " + products[i][1]);
+            System.out.println(products[i][arrayPrice] + " - " + products[i][arrayName]);
         }
     }
 

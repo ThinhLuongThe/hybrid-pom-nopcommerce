@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Testcases for Travelers" parallel="false">
+<suite thread-count="1" name="Testcases for Travelers" verbose="1" annotations="JDK" parallel="instances">
     <listeners>
         <listener class-name="commons.MethodListener"/>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
@@ -7,27 +7,25 @@
         <listener class-name="reportConfig.ExtentReportV4.ExtentReportListener"/>
     </listeners>
 
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url1" value="https://bachlongmobile.com/apple"/>
+    <parameter name="url2" value="https://cellphones.com.vn/mobile/apple.html"/>
+    <parameter name="url3" value="https://www.h2shop.vn/dien-thoai-smartphone"/>
+    <parameter name="url4" value="https://macmall.vn/"/>
+
+    <test name="Run on Chrome">
+        <classes>
+            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_Bachlong"/>
+            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_CellphoneS"/>
+            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_H2Shop"/>
+            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_MacMall"/>
+        </classes>
+    </test>
+
     <!--    <test name="Run on Chrome">-->
-    <!--        <parameter name="browser" value="chrome"/>-->
     <!--        <parameter name="url" value="https://blueimp.github.io/jQuery-File-Upload/"/>-->
     <!--        <classes>-->
     <!--            <class name="com.travelers.upload.Lv10_Upload_Files"/>-->
     <!--        </classes>-->
     <!--    </test>-->
-
-    <test name="Run on Chrome">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="https://cellphones.com.vn/mobile/apple.html"/>
-        <classes>
-            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_CellphoneS"/>
-        </classes>
-    </test>
-
-<!--    <test name="Run on Chrome">-->
-<!--        <parameter name="browser" value="chrome"/>-->
-<!--        <parameter name="url" value="https://www.h2shop.vn/dien-thoai-smartphone"/>-->
-<!--        <classes>-->
-<!--            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_H2Shop"/>-->
-<!--        </classes>-->
-<!--    </test>-->
 </suite>
