@@ -15,9 +15,9 @@
 
     <test name="Run on Chrome">
         <classes>
-            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_Bachlong"/>
-            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_CellphoneS"/>
-            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_H2Shop"/>
+<!--            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_Bachlong"/>-->
+<!--            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_CellphoneS"/>-->
+<!--            <class name="com.travelers.sort.lv20_Sort_ASC_DESC_H2Shop"/>-->
             <class name="com.travelers.sort.lv20_Sort_ASC_DESC_MacMall"/>
         </classes>
     </test>

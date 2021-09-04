@@ -30,7 +30,6 @@ public class Bachlong_ApplePageObject extends BasePage {
 
     public void printAllProductName_ProductPrice(String device) {
         String[][] productList = getItemListOfSpecificProduct(Bachlong_ApplePageUI.ALL_PRODUCT_NAMES, Bachlong_ApplePageUI.PRODUCT_NAME_BY_INDEX, Bachlong_ApplePageUI.PRODUCT_PRICE_BY_INDEX, device);
-        sortPriceASCwithCurrency(productList, "₫");
-        printItemListOfProduct(productList);
+        printItemListOfProduct(sortIntPriceAscending(productList));
     }
 }

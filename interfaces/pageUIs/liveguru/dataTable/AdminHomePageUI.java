@@ -1,4 +1,4 @@
-package pageUIs.DataTable.liveguru;
+package pageUIs.liveguru.dataTable;
 
 public class AdminHomePageUI {
     public static final String CLOSE_POPUP_BTN = "//div[@class='message-popup-head']/a";

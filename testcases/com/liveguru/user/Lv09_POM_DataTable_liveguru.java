@@ -8,7 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.DataTable.liveguru.*;
+import pageObjects.liveguru.Page_Generator;
+import pageObjects.liveguru.dataTable.*;
 
 
 public class Lv09_POM_DataTable_liveguru extends BaseTest {

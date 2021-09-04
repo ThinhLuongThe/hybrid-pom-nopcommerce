@@ -1,4 +1,4 @@
-package pageUIs.DataTable.liveguru;
+package pageUIs.liveguru.dataTable;
 
 public class UserRegisterPageUI {
     public static final String FIRSTNAME_TXT = "//input[@id='firstname']";

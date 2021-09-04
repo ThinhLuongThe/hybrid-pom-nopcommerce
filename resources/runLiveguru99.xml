@@ -20,9 +20,11 @@
     <test name="Run on Chrome">
         <parameter name="url" value="http://live.demoguru99.com"/>
         <parameter name="url2" value="http://live.demoguru99.com/index.php/backendlogin/customer/"/>
+        <parameter name="url3" value="http://live.demoguru99.com/index.php/mobile.html"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.liveguru.user.Lv09_POM_DataTable_liveguru"/>
+<!--            <class name="com.liveguru.user.Lv09_POM_DataTable_liveguru"/>-->
+            <class name="com.liveguru.user.lv20_Sort_ASC_DESC_Liveguru"/>
         </classes>
     </test>
 </suite>

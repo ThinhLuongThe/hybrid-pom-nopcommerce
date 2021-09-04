@@ -1,8 +1,8 @@
-package pageObjects.DataTable.liveguru;
+package pageObjects.liveguru.dataTable;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.DataTable.liveguru.AdminHomePageUI;
+import pageUIs.liveguru.dataTable.AdminHomePageUI;
 
 public class AdminHomePageObject extends BasePage {
     public AdminHomePageObject(WebDriver driver) {

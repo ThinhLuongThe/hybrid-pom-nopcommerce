@@ -1,10 +1,7 @@
 package pageObjects.travellers;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.travellers.sort.Bachlong_ApplePageObject;
-import pageObjects.travellers.sort.CellphoneS_iPhonePageObject;
-import pageObjects.travellers.sort.H2Shop_iPhonePageObject;
-import pageObjects.travellers.sort.MacMall_ApplePageObject;
+import pageObjects.travellers.sort.*;
 import pageObjects.travellers.upload.UploadPageObject;
 
 public class Page_Generator {

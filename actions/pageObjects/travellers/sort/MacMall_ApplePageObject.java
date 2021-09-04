@@ -22,7 +22,6 @@ public class MacMall_ApplePageObject extends BasePage {
 
     public void printAllProductName_ProductPrice() {
         String[][] productList = getItemListOfProduct(MacMall_ApplePageUI.ALL_PRODUCT_NAMES, MacMall_ApplePageUI.PRODUCT_NAME_BY_INDEX, MacMall_ApplePageUI.PRODUCT_PRICE_BY_INDEX);
-        sortPriceASCwithCurrency(productList, "₫");
-        printItemListOfProduct(productList);
+        printItemListOfProduct(sortIntPriceAscending(productList));
     }
 }

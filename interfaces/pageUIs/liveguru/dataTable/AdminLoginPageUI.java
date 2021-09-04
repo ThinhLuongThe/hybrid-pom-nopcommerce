@@ -1,4 +1,4 @@
-package pageUIs.DataTable.liveguru;
+package pageUIs.liveguru.dataTable;
 
 public class AdminLoginPageUI {
     public static final String USERNAME_TXT = "//input[@id='username']";

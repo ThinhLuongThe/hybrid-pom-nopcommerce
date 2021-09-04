@@ -1,6 +1,8 @@
-package pageObjects.DataTable.liveguru;
+package pageObjects.liveguru;
 
 import org.openqa.selenium.WebDriver;
+import pageObjects.liveguru.dataTable.*;
+import pageObjects.liveguru.sort.MobilePageObject;
 
 public class Page_Generator {
     public static UserHomePageObject getUserHomePage(WebDriver driver) {
@@ -27,4 +29,7 @@ public class Page_Generator {
         return new AdminLoginPageObject(driver);
     }
 
+    public static MobilePageObject getMobilePage(WebDriver driver) {
+        return new MobilePageObject(driver);
+    }
 }
