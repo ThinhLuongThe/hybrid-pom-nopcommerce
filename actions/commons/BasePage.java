@@ -241,6 +241,96 @@ public class BasePage extends BaseAction {
         return productList;
     }
 
+    public String[][] sortIntPriceAscending(String[][] originList) {
+        String temp;
+        int before, after;
+
+        for (int i = 0; i < originList.length - 1; i++) {
+            for (int j = i + 1; j < originList.length; j++) {
+                before = (int) parsePriceToObject(originList[i][arrayPrice]);
+                after = (int) parsePriceToObject(originList[j][arrayPrice]);
+
+                if (before > after) {
+                    temp = originList[i][arrayPrice];
+                    originList[i][arrayPrice] = originList[j][arrayPrice];
+                    originList[j][arrayPrice] = temp;
+
+                    temp = originList[i][arrayName];
+                    originList[i][arrayName] = originList[j][arrayName];
+                    originList[j][arrayName] = temp;
+                }
+            }
+        }
+        return originList;
+    }
+
+    public String[][] sortIntPriceDescending(String[][] originList) {
+        String temp;
+        int before, after;
+
+        for (int i = 0; i < originList.length - 1; i++) {
+            for (int j = i + 1; j < originList.length; j++) {
+                before = (int) parsePriceToObject(originList[i][arrayPrice]);
+                after = (int) parsePriceToObject(originList[j][arrayPrice]);
+
+                if (before < after) {
+                    temp = originList[i][arrayPrice];
+                    originList[i][arrayPrice] = originList[j][arrayPrice];
+                    originList[j][arrayPrice] = temp;
+
+                    temp = originList[i][arrayName];
+                    originList[i][arrayName] = originList[j][arrayName];
+                    originList[j][arrayName] = temp;
+                }
+            }
+        }
+        return originList;
+    }
+
+    public void printItemListOfProduct(String[][] products) {
+        for (int i = 0; i < products.length; i++) {
+            System.out.println(products[i][arrayPrice] + " - " + products[i][arrayName]);
+        }
+    }
+
+    public Object parsePriceToObject(String targetPrice) {
+        if (targetPrice.contains("₫")) {
+            return Integer.parseInt(targetPrice.replace("₫", "").replace(".", "").replace(",", "").trim());
+        } else if (targetPrice.contains("$")) {
+            return Float.parseFloat(targetPrice.replace("$", "").replace(",", "").trim());
+        } else if (targetPrice.contains("€")) {
+            return Float.parseFloat(targetPrice.replace("€", "").replace(",", "").trim());
+        } else {
+            return Integer.parseInt(targetPrice.replace("VNĐ", "").replace(".", "").replace(",", "").trim());
+        }
+    }
+
+    public Date parseStringToDate(String dateInString) {
+        SimpleDateFormat formater = null;
+        try {
+            if (dateInString.contains(",")) {
+                dateInString = dateInString.replace(",", "");
+            }
+            if (dateInString.contains("/")) {
+                formater = new SimpleDateFormat("dd/MM/yyyy");
+            } else if (dateInString.length() == 11) {
+                formater = new SimpleDateFormat("MMM dd yyyy");
+            } else {
+                formater = new SimpleDateFormat("dd MMMM yyyy");
+            }
+        } catch (Exception e) {
+            System.out.println("Format is not correct" + e.getMessage());
+        }
+
+        Date date = null;
+        try {
+            date = formater.parse(dateInString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
     public boolean isPriceSortedASC(String locator) {
         ArrayList actualList = new ArrayList();
         ArrayList sortedList = new ArrayList();
@@ -306,96 +396,6 @@ public class BasePage extends BaseAction {
         Collections.reverse(sortedList);
 
         return actualList.equals(sortedList);
-    }
-
-    public String[][] sortIntPriceAscending(String[][] originList) {
-        String temp;
-        int before, after;
-
-        for (int i = 0; i < originList.length - 1; i++) {
-            for (int j = i + 1; j < originList.length; j++) {
-                before = (int) parsePriceToObject(originList[i][arrayPrice]);
-                after = (int) parsePriceToObject(originList[j][arrayPrice]);
-
-                if (before > after) {
-                    temp = originList[i][arrayPrice];
-                    originList[i][arrayPrice] = originList[j][arrayPrice];
-                    originList[j][arrayPrice] = temp;
-
-                    temp = originList[i][arrayName];
-                    originList[i][arrayName] = originList[j][arrayName];
-                    originList[j][arrayName] = temp;
-                }
-            }
-        }
-        return originList;
-    }
-
-    public String[][] sortIntPriceDescending(String[][] originList) {
-        String temp;
-        int before, after;
-
-        for (int i = 0; i < originList.length - 1; i++) {
-            for (int j = i + 1; j < originList.length; j++) {
-                before = (int) parsePriceToObject(originList[i][arrayPrice]);
-                after = (int) parsePriceToObject(originList[j][arrayPrice]);
-
-                if (before < after) {
-                    temp = originList[i][arrayPrice];
-                    originList[i][arrayPrice] = originList[j][arrayPrice];
-                    originList[j][arrayPrice] = temp;
-
-                    temp = originList[i][arrayName];
-                    originList[i][arrayName] = originList[j][arrayName];
-                    originList[j][arrayName] = temp;
-                }
-            }
-        }
-        return originList;
-    }
-
-    public Object parsePriceToObject(String targetPrice) {
-        if (targetPrice.contains("₫")) {
-            return Integer.parseInt(targetPrice.replace("₫", "").replace(".", "").replace(",", "").trim());
-        } else if (targetPrice.contains("$")) {
-            return Float.parseFloat(targetPrice.replace("$", "").replace(",", "").trim());
-        } else if (targetPrice.contains("€")) {
-            return Float.parseFloat(targetPrice.replace("€", "").replace(",", "").trim());
-        } else {
-            return Integer.parseInt(targetPrice.replace("VNĐ", "").replace(".", "").replace(",", "").trim());
-        }
-    }
-
-    public Date parseStringToDate(String dateInString) {
-        SimpleDateFormat formater = null;
-        try {
-            if (dateInString.contains(",")) {
-                dateInString = dateInString.replace(",", "");
-            }
-            if (dateInString.contains("/")) {
-                formater = new SimpleDateFormat("dd/MM/yyyy");
-            } else if (dateInString.length() == 11) {
-                formater = new SimpleDateFormat("MMM dd yyyy");
-            } else {
-                formater = new SimpleDateFormat("dd MMMM yyyy");
-            }
-        } catch (Exception e) {
-            System.out.println("Format is not correct" + e.getMessage());
-        }
-
-        Date date = null;
-        try {
-            date = formater.parse(dateInString);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return date;
-    }
-
-    public void printItemListOfProduct(String[][] products) {
-        for (int i = 0; i < products.length; i++) {
-            System.out.println(products[i][arrayPrice] + " - " + products[i][arrayName]);
-        }
     }
 
 

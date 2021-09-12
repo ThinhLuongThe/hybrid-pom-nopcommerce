@@ -35,27 +35,27 @@ public class BaseTest {
     }
 
     protected WebDriver getBrowserDriver(String browser, String url) {
-        switch (browser.trim().toUpperCase()) {
-            case "FIREFOX":
+        switch (Browsers.valueOf(browser.trim().toUpperCase())) {
+            case FIREFOX:
                 System.setProperty("webdriver.gecko.driver", projectPath + File.separator + "browserDrivers" + File.separator + "geckodriver");
                 driver = new FirefoxDriver();
                 break;
-            case "CHROME":
+            case CHROME:
                 System.setProperty("webdriver.chrome.driver", projectPath + File.separator + "browserDrivers" + File.separator + "chromedriver");
                 driver = new ChromeDriver();
                 break;
-            case "EDGE":
+            case EDGE:
                 System.setProperty("webdriver.edge.driver", projectPath + File.separator + "browserDrivers" + File.separator + "msedgedriver");
                 driver = new EdgeDriver();
                 break;
-            case "FIREFOX-HEADLESS":
+            case FIREFOX_HEADLESS:
                 System.setProperty("webdriver.gecko.driver", projectPath + File.separator + "browserDrivers" + File.separator + "geckodriver");
                 FirefoxOptions firefoxOpt = new FirefoxOptions();
                 firefoxOpt.addArguments("headless");
                 firefoxOpt.addArguments("window-size=1366x768");
                 driver = new FirefoxDriver(firefoxOpt);
                 break;
-            case "CHROME-HEADLESS":
+            case CHROME_HEADLESS:
                 System.setProperty("webdriver.chrome.driver", projectPath + File.separator + "browserDrivers" + File.separator + "chromedriver");
                 ChromeOptions chromeOpt = new ChromeOptions();
                 chromeOpt.addArguments("headless");
@@ -74,27 +74,27 @@ public class BaseTest {
     }
 
     protected WebDriver getBrowserDriverManager(String browser, String url) {
-        switch (browser.trim().toUpperCase()) {
-            case "FIREFOX":
+        switch (Browsers.valueOf(browser.trim().toUpperCase())) {
+            case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
-            case "CHROME":
+            case CHROME:
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
-            case "EDGE":
+            case EDGE:
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 break;
-            case "FIREFOX-HEADLESS":
+            case FIREFOX_HEADLESS:
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOpt = new FirefoxOptions();
                 firefoxOpt.addArguments("headless");
                 firefoxOpt.addArguments("window-size=1366x768");
                 driver = new FirefoxDriver(firefoxOpt);
                 break;
-            case "CHROME-HEADLESS":
+            case CHROME_HEADLESS:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOpt = new ChromeOptions();
                 chromeOpt.addArguments("headless");
@@ -117,6 +117,7 @@ public class BaseTest {
             String osName = System.getProperty("os.name").toLowerCase();
 
             if (getDriver() != null) {
+                getDriver().manage().deleteAllCookies();;
                 getDriver().quit();
             }
 
